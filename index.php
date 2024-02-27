@@ -10,7 +10,7 @@
     <nav class="bg-slate-900 text-7xl min-h-[4rem] max-h-[5.6rem]">
      <section class="title text-6xl text-gray-200  montserrat-600 py-4 text-center">Ayur Meds</section>
      <section class="admin-login">
-        <a href="login.php"><button class="text-4xl bg-slate-700 rounded-lg p-1 hover:text-slate-300 text-gray-100 relative bottom-[6.5rem] left-[92rem]">Admin Login</button>
+        <a href="admin/"><button class="text-4xl bg-slate-700 rounded-lg p-1 hover:text-slate-300 text-gray-100 relative bottom-[6.5rem] left-[92rem]">Admin Login</button>
         </a>
      </section>
      <div>
