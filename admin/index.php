@@ -108,7 +108,14 @@ include "../connection.php"
 
                 // echo "$plant_name:$plant_category:$disease:$plant_usage";
 
-                $sql = "insert into details values('$plant_name', $plant_category', '$disease', $plant_usage')";
+                // $sql = "insert into details values('$plant_name', $plant_category', '$disease', ?)";
+                $stmt = $mysqli->prepare("insert into details values(?, ?, ?, ?)");
+                $stmt->bind_param("ssss", $plant_name, $plant_category, $disease, $plant_usage);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                echo $result;
+
+
 
             }
             ?>
