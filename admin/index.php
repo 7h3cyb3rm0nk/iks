@@ -12,14 +12,16 @@ include "../connection.php"
 <body class="h-screen">
     
 <nav class=" flex bg-slate-900  text-gray-400   justify-end text-4xl py-3 pb-4 ">
-    <main class="text-gray-200 mr-[7em] text-6xl  montserrat-600 font-bold">AyurMeds</main> <aside class="text-gray-200 self-end bg-slate-700 rounded-lg p-2 ">Admin Dashboard</aside> 
+    <main class="text-gray-200 mr-[7em] text-6xl  montserrat-600 font-bold">AyurMeds</main> <aside class="text-gray-200 self-end bg-slate-700 rounded-lg p-2 mr-3 cursor-pointer">Admin Dashboard</aside> 
 </nav>
-    <section class="content h-full bg-gray-200 ">
-        <section class="add flex flex-col gap-[4em] items-center">
-            <h1 class="text-slate-900 text-2xl w-[35%] mt-3 rounded-lg text-center bg-slate-500 font-bold">Add</h1>
-            <div class="container max-w-fit bg-gray-300 p-4 rounded-lg ">
-            <form action="" method="post" class="flex flex-col gap-3 text-center">
-                <select name="plants" id="plants" class="plants text-center rounded-md" >
+    <section class="content h-full bg-slate-500 ">
+        <section class="add flex flex-col gap-[2em] items-center">
+            <h1 class="text-slate-900  w-[30%] py-2 text-3xl mt-3 rounded-lg text-center shadow-lg bg-slate-500 font-bold">Add</h1>
+            <div class="container max-w-fit bg-gray-300 p-9 shadow-lg rounded-lg ">
+            <form action="" method="post" class="flex flex-col gap-3 font-bold text-2xl text-center">
+                <div>
+                    <label for="plants">Plant Name:</label>
+                <select name="plants" id="plants" class="plants text-center text-slate-800 ml-1 px-2 py-1 rounded-md" >
                     
                     <?php
                     $sql = "select name from plants";
@@ -46,7 +48,10 @@ include "../connection.php"
                    
                     
                 </select>
-                <select name="category" id="" class="category text-center rounded-md">
+                </div>
+                <div>
+                    <label for="category">Category:</label>
+                <select name="category" id="category" class="category text-center ml-1 text-slate-800 px-2 py-1 rounded-md">
                 <?php
                     $sql = "select type from categories";
                     $result = $mysqli->query($sql);
@@ -70,7 +75,10 @@ include "../connection.php"
                     // $mysqli->close();
                     ?>
                 </select>
-                <select name="disease" id="" class="disease text-center rounded-md">
+                </div>
+                <div>
+                    <label for="disease">Disease:</label>
+                <select name="disease" id="" class="disease ml-1 px-2 py-1 text-center text-slate-800 rounded-md">
                 <?php
                     $sql = "select name from diseases";
                     $result = $mysqli->query($sql);
@@ -94,6 +102,7 @@ include "../connection.php"
                     // $mysqli->close();
                     ?>
                 </select>
+                </div>
                 <textarea name="usage" id="usage" cols="30" rows="10" placeholder="Usage Details" class="text-center rounded-md"></textarea>
                 <input type="submit" value="submit" class="bg-slate-900 text-gray-100 px-1 py-1 rounded-lg hover:cursor-pointer" name="submit">
                 
