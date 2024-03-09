@@ -3,7 +3,7 @@
 $username = "ramees";
 $password = "ramees";
 $host = "localhost";
-$database = "Plants";
+$database = "indian-knowledge-system";
 
 
 $mysqli = new mysqli($host, $username, $password, $database);

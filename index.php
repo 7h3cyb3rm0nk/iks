@@ -46,8 +46,8 @@ include "connection.php";
             </select>
             <input type="submit" name="submit" value="search" class="rounded-lg bg-slate-800 text-gray-50 h-[2em] self-center px-2 hover:cursor-pointer ">
             </form>
-            </section>
-            <section class="search flex py-[7rem]  opacity-80  w-[50%] items-center  bg-zinc-600 text-gray-200 text-2xl gap-3 h-[30%] justify-center rounded-lg shadow-lg">
+    </section>
+     <section class="search flex py-[7rem]  opacity-80  w-[50%] items-center  bg-zinc-600 text-gray-200 text-2xl gap-3 h-[30%] justify-center rounded-lg shadow-lg">
         <form action="" method="get" class="w-[100%] h-fit gap-4 flex justify-center align-center">
        
         
@@ -68,17 +68,8 @@ include "connection.php";
             </select>
             <input type="submit" name="plant-submit" value="search" class="rounded-lg bg-slate-800 text-gray-50 h-[2em] self-center px-2 hover:cursor-pointer ">
             </form>
-            </section>
-        <section class="result">
-            hello
-            <?php
-            if( isset($_GET['submit'])){
-                $disease = $_GET['disease'];
-                echo $disease;
-            }
-            ?>
-
-        </section>
+    </section>
+       
 
 
 </main>
