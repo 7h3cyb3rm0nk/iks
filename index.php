@@ -1,78 +1,51 @@
 <?php
-include "connection.php";
+require("connection.php");
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class=>AyurMeds</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    
+    <title>Admin | AyurMeds</title>
+    <link rel="stylesheet" href="../css/styles.css?v=<?=time();?>">
 </head>
-<body class="min-h-screen h-screen " >
-    <h1 class="bg-slate-900 text-gray-200 text-center text-4xl">Indian Knowledge System</h1>
-    <nav class="bg-slate-900 text-7xl min-h-[3.8rem] max-h-[5.3rem]">
-     <section class="title text-6xl text-gray-200  montserrat-600 py-4 text-center">Ayur Meds</section>
-     <section class="admin-login flex py-6">
-<button href="admin/" class="text-4xl bg-slate-700  rounded-lg p-2 hover:text-slate-300 text-gray-100 relative bottom-[6.5rem] left-[92rem] ">Admin Login</button>
-  
-     </section>
-
-     <div>
+<body class="min-h-screen bg-gray-200 ">
+    <nav class="bg-gray-500 bg-opacity-80 grid  text-6xl py-5 montserrat-600  grid-cols-10   ">
+    <div class="menu col-span-1 p-3 h-full px-4  cursor-pointer focus:animate-spin "i id="menu">
+        <svg viewBox="0 0 100 80" width="40" height="40">
+          <rect class="rounded-lg" width="100" height="20"></rect>
+          <rect class="rounded-lg" y="30" width="100" height="20"></rect>
+          <rect class="rounded-lg" y="60" width="100" height="20"></rect>
+        </svg>
+        <div class="menu-list translate-x-[-150%] fixed left-0 px-3  text-xl min-h-screen bg-slate-700 ml-0 ">
+           sample content
+       </div>
+    </div>
+        <div class="text-gray-300 col-span-9 text-center">Indian Knowledge System</div>
         
-     </div>
     </nav>
-
-    <main class="h-screen py-[9em] bg-slate-200 flex justify-center flex-col items-center gap-5" style="background: url('./assets/pngs/main-bg.png')">
-    <section class="search flex py-[7rem]  opacity-80 w-[50%] bg-zinc-600 text-gray-200 text-2xl gap-3 h-[30%] justify-center rounded-lg items-center shadow-lg">
-        <form action="" method="get" class="w-[100%] h-fit gap-4 flex justify-center align-center ">
-       
+    <section class="grid grid-cols-8">
         
-        <p class=" self-center font-bold" >Search Remedies for</p>
-            <select name="disease" id="disease" class="py-[0.2rem] h-[2em] text-slate-900 self-center px-2 rounded-lg">
-            <?php
-            
-            $sql = "select * from diseases;";
-            $result = $mysqli->query($sql);
-            while($row  = $result->fetch_assoc()){
-                $value = $row['name'];
-                echo "
-                <option value='$value'>$value</option>
-                ";
-            }
 
-            ?>
-            </select>
-            <input type="submit" name="submit" value="search" class="rounded-lg bg-slate-800 text-gray-50 h-[2em] self-center px-2 hover:cursor-pointer ">
-            </form>
     </section>
-     <section class="search flex py-[7rem]  opacity-80  w-[50%] items-center  bg-zinc-600 text-gray-200 text-2xl gap-3 h-[30%] justify-center rounded-lg shadow-lg">
-        <form action="" method="get" class="w-[100%] h-fit gap-4 flex justify-center align-center">
-       
-        
-        <p class=" self-center font-bold" >Search By plant</p>
-            <select name="plant" id="plant" class="py-[0.2rem] h-[2em]  text-slate-900 self-center px-2 rounded-lg">
-            <?php
-            
-            $sql = "select name from plants;";
-            $result = $mysqli->query($sql);
-            while($row  = $result->fetch_assoc()){
-                $value = $row['name'];
-                echo "
-                <option value='$value'>$value</option>
-                ";
-            }
+<script>
+    let menu = document.querySelector("#menu");
+    let menuList = document.querySelector(".menu-list");
 
-            ?>
-            </select>
-            <input type="submit" name="plant-submit" value="search" class="rounded-lg bg-slate-800 text-gray-50 h-[2em] self-center px-2 hover:cursor-pointer ">
-            </form>
-    </section>
-       
-
-
-</main>
+    menu.addEventListener("click", () => {
+        menuList.classList.toggle("translate-x-0")
+        menu.classList.toggle("bg-slate-700");
+        menu.classList.toggle("fixed");
+        menu.classList.toggle("top-0");
+        menu.classList.toggle("w-[5em]");
+        menu.classList.toggle("pt-8");
+        menuList.classList.toggle("transition-all");
+        menuList.classList.toggle("duration-500")
+    })
+    </script>
     
-</body>
+</body> 
 </html>
