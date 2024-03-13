@@ -45,7 +45,7 @@ require("connection.php");
     </section>
 
     <!-- scripts -->
-<script>
+<!-- <script>
     let menu = document.querySelector("#menu");
     let menuList = document.querySelector(".menu-list");
     let navText = document.querySelector(".navText");
@@ -72,7 +72,7 @@ require("connection.php");
 
 
 
-    </script>
+    </script> -->
     <script src="./js/scripts.js"></script>
 
 <!-- ajax -->

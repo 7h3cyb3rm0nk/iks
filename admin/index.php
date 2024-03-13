@@ -11,9 +11,11 @@ include "../connection.php"
 </head>
 <body class="h-screen">
     
-<nav class=" flex bg-slate-900  text-gray-400   justify-end text-4xl py-3 pb-4 ">
-    <main class="text-gray-200 mr-[7em] text-6xl  montserrat-600 font-bold">AyurMeds</main> <aside class="text-gray-200 self-end bg-slate-700 rounded-lg p-2 mr-3 cursor-pointer">Admin Dashboard</aside> 
-</nav>
+
+    <?php
+    include("../pages/header.php");
+    ?>
+
     <section class="content h-full bg-slate-500 ">
         <section class="add flex flex-col gap-[2em] items-center">
             <h1 class="text-slate-900  w-[30%] py-2 text-3xl mt-3 rounded-lg text-center shadow-lg bg-slate-500 font-bold">Add</h1>
@@ -131,5 +133,7 @@ include "../connection.php"
             </div>
         </section>
     </section>
+
+    <script src="../js/scripts.js"></script>
 </body> 
 </html>
