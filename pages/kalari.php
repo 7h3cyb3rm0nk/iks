@@ -14,8 +14,10 @@ include("../connection.php");
 <?php
 include("header.php");
 ?>
+
 <section class="snap-y snap-mandatory scroll-smooth scroll-pb-4 ">
-   <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] snap-center snap-always  min-w-[80vw] rounded-lg p-4 ">
+   <section class=" m-5 shadow-lg h-[60vh] snap-center snap-always  min-w-[80vw] rounded-lg p-4 " style="background:url(' ../assets/pngs/main-bg.png');">
+   
 
 
     </section>
