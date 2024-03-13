@@ -14,8 +14,8 @@ let menu = document.querySelector("#menu");
     menu.addEventListener("click", () => {
         menuList.classList.toggle("translate-x-0");
         menuList.classList.toggle("translate-x-[-150%]");
-        menu.classList.toggle("bg-slate-700");
-        menu.classList.toggle("fixed");
+        // menu.classList.toggle("");
+        menu.classList.toggle("sticky");
         menu.classList.toggle("top-0");
         menu.classList.toggle("w-[5em]");
         menu.classList.toggle("pt-8");
@@ -23,6 +23,7 @@ let menu = document.querySelector("#menu");
         // menuList.classList.toggle("duration-500");
         // navText.classList.toggle("transition-all");
         navText.classList.toggle("lg:text-7xl");
+        navText.classList.toggle("sm:ml-20");
         menu.classList.toggle("text-gray-200");
         // menuList.toggle("rounded-lg")
         

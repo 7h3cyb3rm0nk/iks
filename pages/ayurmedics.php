@@ -22,7 +22,7 @@ include("header.php");
     </p>
     </section>
     <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] min-w-[80vw] snap-center snap-always rounded-lg p-4 ">
-    <div class="head w-full bg-slate-800 h-11 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl">Search Plants</div>
+    <div class="head w-full md:w-72 shadow-md mx-auto bg-slate-800 h-11 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl">Search Plants</div>
 
     </section>
     <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] min-w-[80vw] snap-start snap-always   rounded-lg p-4 ">
