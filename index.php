@@ -23,11 +23,11 @@ require("connection.php");
         <div class="menu-list rounded-lg text-gray-200 sm:mb-5 translate-x-[-150%] fixed left-0 px-3 pt-8 transition-all duration-500 text-xl min-h-screen ml-0 flex items-center ">
            <div class="list px-12 text-slate-800 py-[8em] rounded-md min-h-fit bg-gray-300 flex gap-10 relative bottom-10 shadow-md">
             <ul class="grid gap-12">
-                <li class=" hover:text-slate-500 cursor-pointer">Ayurmedics</li>
-                <li class=" hover:text-slate-500 cursor-pointer">Kalari</li>
-                <li class=" hover:text-slate-500 cursor-pointer">Yoga</li>
-                <li class=" hover:text-slate-500 cursor-pointer">Music Therapy</li>
-                <li class="hover:text-slate-500 cursor-pointer">First-Aids</li>
+                <li class=" hover:text-slate-500 cursor-pointer" id="ayurmedics">Ayurmedics</li>
+                <li class=" hover:text-slate-500 cursor-pointer" id="kalari">Kalari</li>
+                <li class=" hover:text-slate-500 cursor-pointer" id="yoga">Yoga</li>
+                <li class=" hover:text-slate-500 cursor-pointer" id="music-therapy">Music Therapy</li>
+                <li class="hover:text-slate-500 cursor-pointer" id="first-aids">First-Aids</li>
             </ul>
            </div>
        </div>
@@ -66,8 +66,28 @@ require("connection.php");
         // menuList.toggle("rounded-lg")
         
         // navText.classList.toggle("duration-500")
-    })
+    });
+
+  
+
+
+
     </script>
+    <script src="./js/scripts.js"></script>
+
+<!-- ajax -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#ayurmedics").click(function(event) {
+        event.preventDefault(); // Prevent the default action (navigation)
+        $.get("admin/index.php", function(data) {
+            console.log(data); // Handle the response data
+        });
+    });
+});
+</script> -->
+
     
 </body> 
 </html>
