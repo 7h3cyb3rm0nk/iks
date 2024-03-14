@@ -22,7 +22,7 @@ let menu = document.querySelector("#menu");
         // menuList.classList.toggle("transition-all");
         // menuList.classList.toggle("duration-500");
         // navText.classList.toggle("transition-all");
-        navText.classList.toggle("lg:text-7xl");
+        // navText.classList.toggle("lg:text-7xl");
         navText.classList.toggle("sm:ml-20");
         menu.classList.toggle("text-gray-200");
         // menuList.toggle("rounded-lg")
