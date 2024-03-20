@@ -24,16 +24,21 @@ include("header.php");
 
 
     <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] overflow-hidden h-full min-w-[80vw] snap-center snap-always rounded-lg p-4 ">
-    <div class="head w-full md:w-72 shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row">Search Plants</div>
-    <section class="search flex py-[7rem] md:mx-auto sm:mx-auto mx-6 sm:min-w-fit  px-10 opacity-80 min-w-fit   my-20 md:w-[50%] items-center  bg-zinc-600 text-gray-200 text-xl sm:md:text-xl gap-3 h-[30%] justify-center rounded-lg shadow-lg sm:max-w-50">
-        <form action="" method="get" class="w-[100%] h-fit gap-4 flex justify-center align-center">
-       
         
-        <p class=" self-center font-bold" >Search By plant</p>
-            <select name="plant" id="plant" class="py-[0.2rem] h-[2em]  text-slate-900 self-center px-2 rounded-lg">
-            <?php
+    <div class="head w-full md:w-72 shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row">Search Plants</div>
+    <?php
+    if(!isset($_GET['submit'])){
+
+   echo "
+    <section class='search flex py-[7rem] md:mx-auto sm:mx-auto mx-6 sm:min-w-fit  px-10 opacity-80 min-w-fit   my-20 md:w-[50%] items-center  bg-zinc-600 text-gray-200 text-xl sm:md:text-xl gap-3 h-[30%] justify-center rounded-lg shadow-lg sm:max-w-50'>
+      <form action='' method='get' class='w-[100%] h-fit gap-4 flex justify-center align-center'>";
+       
+        echo "
+        <p class=' self-center font-bold' >Search By plant</p>
+            <select name='plant' id='plant' class='py-[0.2rem] h-[2em]  text-slate-900 self-center px-2 rounded-lg'>";
             
-            $sql = "select name from plants;";
+            
+            $sql = 'select name from plants;';
             $result = $mysqli->query($sql);
             while($row  = $result->fetch_assoc()){
                 $value = $row['name'];
@@ -42,10 +47,46 @@ include("header.php");
                 ";
             }
 
-            ?>
+            echo "
             </select>
-            <input type="submit" name="plant-submit" value="search" class="rounded-lg bg-slate-800 text-gray-50 h-[2em] self-center px-2 hover:cursor-pointer ">
+            <input type='submit' name='submit' value='search' class='rounded-lg bg-slate-800 text-gray-50 h-[2em] self-center px-2 hover:cursor-pointer'>
             </form>
+         ";   
+        }
+        if(isset($_GET['submit'])){
+
+            echo "
+            <section class='bg-slate-400 m-2 rounded-lg  min-h-[70vh] py-12 text-2xl'>
+
+            ";
+            $plant_name = $_GET['plant'];
+            $sql = "select * from details where plant ='$plant_name'";
+            $result = $mysqli->query($sql);
+            echo "
+            <table class='text-left mx-auto my-3'>
+            <tr>
+            <th class='px-4 pb-3 pt-8  mx-4 border-b-2 border-slate-300'>Plant</th>
+            <th class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>Category</th>
+            <th class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>Diseases</th>
+            <th class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>Usage</th>
+            </tr>
+            
+
+            ";
+            while($row = $result->fetch_assoc()) {
+              echo "<tr>
+              <td class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>{$row['plant']}</td>
+              <td class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>{$row['category']}</td>
+              <td class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>{$row['disease']}</td>
+              <td class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>{$row['usagedetails']}</td>
+              </tr>
+              ";
+            }
+            echo "</table>
+            </section>";
+
+        }
+        ?>
     </section>
     </section>
 
