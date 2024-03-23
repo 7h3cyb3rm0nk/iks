@@ -1,4 +1,4 @@
-<nav class="bg-slate-900 bg-opacity-80 grid  text-6xl py-5 z-10 poppins-700 transition-all duration-500 grid-cols-10 z-2  ">
+<nav class="bg-slate-900 bg-opacity-80 grid  text-6xl py-5 z-10 poppins-700 transition-all duration-500 snap-start snap-proximity grid-cols-10 z-2  ">
     <div class="menu col-span-1 p-3 h-full px-4 cursor-pointer " id="menu">
         <svg viewBox="0 0 100 80" width="40" height="40" class="stroke-slate-900 mb-5">
           <rect class="rounded-lg" width="100" height="20" fill="white"></rect>
