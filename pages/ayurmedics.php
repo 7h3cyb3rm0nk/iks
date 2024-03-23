@@ -65,7 +65,8 @@ if(!filter_has_var(INPUT_GET, 'plantSubmit')){
         // to exclusively check for form input
         if(filter_has_var(INPUT_GET, 'plantSubmit')){
             //unsetting remediesSubmit whenever the plant search is done
-            unset($GET['remediesSubmit']);
+
+            if(filter_has_var(INPUT_GET, 'remediesSubmit'))unset($GET['remediesSubmit']);
 
             echo "
             <section class='bg-slate-400 m-2 rounded-lg  min-h-[70vh] py-12 text-2xl'>
