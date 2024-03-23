@@ -27,7 +27,7 @@ include("header.php");
         
     <div class="head w-full md:w-72 shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row">Search Plants</div>
     <?php
-    if(!isset($_GET['submit'])){
+    if(!filter_has_var(INPUT_GET, 'plantSubmit')){
 
    echo "
     <section class='search flex py-[7rem] md:mx-auto sm:mx-auto mx-6 sm:min-w-fit  px-10 opacity-80 min-w-fit   my-20 md:w-[50%] items-center  bg-zinc-600 text-gray-200 text-xl sm:md:text-xl gap-3 h-[30%] justify-center rounded-lg shadow-lg sm:max-w-50'>
@@ -49,11 +49,13 @@ include("header.php");
 
             echo "
             </select>
-            <input type='submit' name='submit' value='search' class='rounded-lg bg-slate-800 text-gray-50 h-[2em] self-center px-2 hover:cursor-pointer'>
+            <input type='submit' name='plantSubmit' value='search' class='rounded-lg bg-slate-800 text-gray-50 h-[2em] self-center px-2 hover:cursor-pointer'>
             </form>
          ";   
         }
-        if(isset($_GET['submit'])){
+        // using filter_has_var instead of isset()
+        // to exclusively check for form input
+        if(filter_has_var(INPUT_GET, 'plantSubmit')){
 
             echo "
             <section class='bg-slate-400 m-2 rounded-lg  min-h-[70vh] py-12 text-2xl'>
@@ -63,8 +65,8 @@ include("header.php");
             $sql = "select * from details where plant ='$plant_name'";
             $result = $mysqli->query($sql);
             echo "
-            <table class='text-left mx-auto my-3'>
-            <tr>
+            <table class='text-left mx-auto table max-w-min bg-gray-200 table-auto p-3 rounded-lg shadow-md outline-none border-none my-3 '>
+            <tr class=''>
             <th class='px-4 pb-3 pt-8  mx-4 border-b-2 border-slate-300'>Plant</th>
             <th class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>Category</th>
             <th class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>Diseases</th>
@@ -74,11 +76,11 @@ include("header.php");
 
             ";
             while($row = $result->fetch_assoc()) {
-              echo "<tr>
-              <td class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>{$row['plant']}</td>
+              echo "<tr class=' ' >
+              <td class='px-4 pb-3 pt-8 mx-4 border-b-2  border-slate-300'>{$row['plant']}</td>
               <td class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>{$row['category']}</td>
               <td class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>{$row['disease']}</td>
-              <td class='px-4 pb-3 pt-8 mx-4 border-b-2 border-slate-300'>{$row['usagedetails']}</td>
+              <td class='px-4 pb-3 pt-8 break-all text-wrap mx-4 border-b-2 border-slate-300'>{$row['usagedetails']}</td>
               </tr>
               ";
             }
@@ -92,12 +94,12 @@ include("header.php");
 
 
     <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] min-w-[80vw] snap-start snap-always   rounded-lg p-4 ">
-    <div class="head w-full bg-slate-800 h-11 rounded-lg text-gray-100 font-bold"></div>
+    <div class="head w-full md:w-72 shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row">Remedies</div>
     
 
     </section>
     <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] min-w-[80vw] snap-start snap-always rounded-lg p-4 ">
-    <div class="head w-full bg-slate-800 h-11 rounded-lg"></div>
+    <div class="head w-full bg-slate-800 h-11 rounded-lg text-gray-200"></div>
 
     </section>
     <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] min-w-[80vw] snap-start snap-always rounded-lg p-4 ">
@@ -106,6 +108,9 @@ include("header.php");
 
     </section>
 </section>
+<script>
+   
+</script>
 </body>
 </html>
 
