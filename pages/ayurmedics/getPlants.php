@@ -18,34 +18,41 @@
 
        
 
-        $sql = "select distinct plants.name , plants.scientific_name ,details.category from plants inner join details on plants.name = details.plant where plants.name = ?";
+        $sql = "select distinct plants.name , plants.scientific_name, plants.description ,details.category from plants inner join details on plants.name = details.plant where plants.name = ?";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param("s", $plantName);
         $stmt->execute();   
         $result = $stmt->get_result();
       
-
+       if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
             $plantName = htmlspecialchars($row['name']);
             $plantScientificName = htmlspecialchars($row['scientific_name']);
             $plantCategory = htmlspecialchars($row['category']);
+            $plantDescription = $row['description'];
 
             // display as list
             echo "
-            <section class='bg-gray-100 w-[80%] h-[10em] max-h-fit mx-auto rounded-md shadow-md p-4 grid grid-cols-8'>
-            <div class='text-3xl flex flex-col col-span-1 font-extrabold text-zinc-800 '>$plantName
-            <img src='https://pixabay.com/vectors/group-user-icon-person-personal-2935521/' class='h-[3em] w-[3em]'>
+            <section class='bg-gray-100 w-[80%] min-h-[65vh] overflow-auto mx-auto rounded-md shadow-md p-4 grid grid-cols-8 gap-8 grid-rows-2'>
+            <div class='text-3xl flex flex-col col-span-2 font-extrabold text-zinc-800 '>$plantName
+            <img src='https://pixabay.com/vectors/group-user-icon-person-personal-2935521/'  class='h-[8em] rounded'>
             </div>
-            <div class='col-span-7'>
-            <section class='font-semibold'>Scientific Name: <span class='text-slate-800 font-bold'> $plantScientificName </span></section>
+            <div class='col-span-6 flex  ml-8 text-2xl items-center justify-start'>
+            <section class='font-semibold self-center'>Scientific Name: <span class='text-slate-700 font-bold'> $plantScientificName </span></section>
             
             </div>
+            <!-- description -->
+            <div class='col-span-8 text-left font-semibold text-xl px-8 text-slate-800'>
+            $plantDescription
+            </div>
             
-            <section>
             ";
 
 
         }
+       } else{
+        echo "<h1 class='text-3xl font-bold text-orange-900 bg-slate-200 rounded-lg h-fit p-4'>NO PLANTS FOUND</h1>";
+       }
         
 
     }
