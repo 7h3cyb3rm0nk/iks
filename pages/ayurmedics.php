@@ -36,16 +36,16 @@ include("header.php");
 
     <!-- plant search form -->
     <section class="plantSearchform">
-    <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-center items-center">
+    <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-center items-center" autocomplete="off">
         <label for="plantName" class="text-slate-800 font-bold mb-2">Search Plants:</label>
         <div class="flex">
-            <input type="text" name="plantName" id="plantName" class="rounded-md px-2 mr-2">
+            <input type="text" name="plantName" id="plantName"  class="rounded-md px-2 mr-2">
             <input type="submit" value="Search" name="plantSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
             
         </div>
         
     </form>
-    <aside class="flex-none font-bold text-xl mt-2 text-gray-700 " id="plantSuggestion" >Suggestions:</aside>
+    <aside class="flex-none font-bold text-xl mt-2 text-gray-700 "  >Suggestions:<span id="plantSuggestion"></span></aside>
     </section>
 
     <!-- remedies search form -->
@@ -86,9 +86,32 @@ include("header.php");
 <script>
 
     // script to give suggestions
-
+//    plant suggestions
     $('#plantName').keyup(function() {
-        console.log(this.value);
+        var query = $(this).val();
+        if(query.length > 0) {
+            $.ajax({
+                url:"ayurmedics/plantSuggestions.php",
+                type:'GET',
+                data: { 'query': query},
+                success: function(data){
+                    if(data !== ""){
+                        console.log(data);
+                        var suggestions = JSON.parse(data);
+                        var suggestionsHtml = '';
+                        for(var i=0; i<suggestions.length; i++){
+                            suggestionsHtml +=  " " + suggestions[i] + "  " ;
+                        }
+                        $('#plantSuggestion').html(suggestionsHtml);
+                    }else {
+                        $('#plantSuggestion').html('');
+                    }
+                }
+            });
+        }else{
+            $("#plantSuggestion").html('');
+        }
+        
     });
    
 </script>
