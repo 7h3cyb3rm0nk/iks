@@ -51,7 +51,7 @@ include("header.php");
     <!-- remedies search form -->
     <section class="remediesSearchForm">
     <form action="" method="get" class="flex flex-row gap-4  justify-center items-center">
-        <label for="diseaseName" class="text-slate-800 font-bold mb-2">Search diseases:</label>
+        <label for="diseaseName" class="text-slate-800 font-bold mb-2">Search Remedies:</label>
         <div class="flex">
             <input type="text" name="diseaseName" id="diseaseName" class="rounded-md px-2 mr-2">
             <input type="submit" value="Search" name="diseaseSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
