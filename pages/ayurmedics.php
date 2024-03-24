@@ -36,7 +36,7 @@ include("header.php");
 
     <!-- plant search form -->
     <section class="plantSearchform">
-    <form action="" method="get" class="flex flex-row gap-4 justify-center items-center">
+    <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-center items-center">
         <label for="plantName" class="text-slate-800 font-bold mb-2">Search Plants:</label>
         <div class="flex">
             <input type="text" name="plantName" id="plantName" class="rounded-md px-2 mr-2">
