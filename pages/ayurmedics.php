@@ -106,7 +106,34 @@ if(!filter_has_var(INPUT_GET, 'plantSubmit')){
 
     <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] min-w-[80vw] snap-start snap-always   rounded-lg p-4 ">
     <div class="head w-full md:w-72 shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row">Remedies</div>
-    
+    <?php
+    if(!filter_has_var(INPUT_GET, 'diseaseSubmit')) {
+    echo "
+    <section class='search flex py-[7rem] md:mx-auto sm:mx-auto mx-6 sm:min-w-fit  px-10 opacity-80 min-w-fit   my-20 md:w-[50%] items-center  bg-zinc-600 text-gray-200 text-xl sm:md:text-xl gap-3 h-[30%] justify-center rounded-lg shadow-lg sm:max-w-50'>
+      <form action='' method='get' class='w-[100%] h-fit gap-4 flex justify-center align-center'>";
+
+       
+       
+        echo "<p class=' self-center font-bold' >Search for remedies</p>
+            <select name='disease' id='diesease' class='py-[0.2rem] h-[2em]  text-slate-900 self-center px-2 rounded-lg'>";
+            
+            
+            $sql = 'select name from diseases;';
+            $result = $mysqli->query($sql);
+            while($row  = $result->fetch_assoc()){
+                $value = $row['name'];
+                echo "
+                <option value='$value'>$value</option>
+                ";
+            }
+
+            echo "
+            </select>
+            <input type='submit' name='diseaseSubmit' value='search' class='rounded-lg bg-slate-800 text-gray-50 h-[2em] self-center px-2 hover:cursor-pointer'>
+            </form>
+         "; 
+        }
+    ?>
 
     </section>
     <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] min-w-[80vw] snap-start snap-always rounded-lg p-4 ">
