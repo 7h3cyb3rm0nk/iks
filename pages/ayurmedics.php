@@ -33,10 +33,10 @@ include("header.php");
 
     <!-- section containing forms -->
     <section class="grid grid-rows-6 place-items-center h-full text-2xl mt-20">
-
+    <div class="forms flex flex-col gap-12 align-start">
     <!-- plant search form -->
     <section class="plantSearchform text-left">
-    <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-center items-center" autocomplete="off">
+    <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
         <label for="plantName" class="text-slate-800 font-bold mb-2">Search Plants:</label>
         <div class="flex">
             <input type="text" name="plantName" id="plantName"  class="rounded-md px-2 mr-2">
@@ -49,9 +49,9 @@ include("header.php");
     </section>
 
     <!-- remedies search form -->
-    <section class="remediesSearchForm text-left">
-    <form action="" method="get" class="flex flex-row gap-4  justify-center items-center">
-        <label for="diseaseName" class="text-slate-800 font-bold mb-2">Search Remedies:</label>
+    <section class="remediesSearchForm  flex flex-col text-left">
+    <form action="ayurmedics/getDiseases.php" method="get" class="flex flex-row gap-4 justify-start">
+        <label for="diseaseName" class="text-slate-800 font-bold mb-2">Search Remedies for:</label>
         <div class="flex">
             <input type="text" name="diseaseName" id="diseaseName" class="rounded-md px-2 mr-2">
             <input type="submit" value="Search" name="diseaseSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
@@ -60,7 +60,7 @@ include("header.php");
     </form>
     <aside class="flex-none font-bold text-xl mt-2 text-gray-700 " id="diseaseSuggestion" >Suggestions:</aside>
     </section>
-
+    </div>
     </section>
     
    
