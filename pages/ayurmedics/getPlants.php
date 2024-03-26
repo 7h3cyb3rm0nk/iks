@@ -18,7 +18,7 @@
 
        
 
-        $sql = "select distinct plants.name , plants.scientific_name, plants.description ,details.category from plants inner join details on plants.name = details.plant where plants.name = ?";
+        $sql = "select distinct plants.name , plants.scientific_name, plants.description from plants where plants.name = ?";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param("s", $plantName);
         $stmt->execute();   
@@ -28,7 +28,6 @@
         while($row = $result->fetch_assoc()){
             $plantName = htmlspecialchars($row['name']);
             $plantScientificName = htmlspecialchars($row['scientific_name']);
-            $plantCategory = htmlspecialchars($row['category']);
             $plantDescription = $row['description'];
 
             // display as list

@@ -35,7 +35,7 @@ include("header.php");
     <section class="grid grid-rows-6 place-items-center h-full text-2xl mt-20">
 
     <!-- plant search form -->
-    <section class="plantSearchform">
+    <section class="plantSearchform text-left">
     <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-center items-center" autocomplete="off">
         <label for="plantName" class="text-slate-800 font-bold mb-2">Search Plants:</label>
         <div class="flex">
@@ -49,7 +49,7 @@ include("header.php");
     </section>
 
     <!-- remedies search form -->
-    <section class="remediesSearchForm">
+    <section class="remediesSearchForm text-left">
     <form action="" method="get" class="flex flex-row gap-4  justify-center items-center">
         <label for="diseaseName" class="text-slate-800 font-bold mb-2">Search Remedies:</label>
         <div class="flex">
