@@ -32,7 +32,7 @@ include("header.php");
 
 
     <!-- section containing forms -->
-    <section class="grid grid-rows-6 place-items-center h-full text-2xl mt-20">
+    <section class="flex flex-col items-center justify-center h-full text-2xl ">
     <div class="forms flex flex-col gap-12 align-start">
     <!-- plant search form -->
     <section class="plantSearchform text-left">
