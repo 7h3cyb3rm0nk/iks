@@ -58,7 +58,7 @@ include("header.php");
         </div>
         
     </form>
-    <aside class="flex-none font-bold text-xl mt-2 text-gray-700 " id="diseaseSuggestion" >Suggestions:</aside>
+    <aside class="flex-none font-bold text-xl mt-2 text-gray-700 " >Suggestions: <span id="diseaseSuggestion"> </span></aside>
     </section>
     </div>
     </section>
@@ -110,6 +110,33 @@ include("header.php");
             });
         }else{
             $("#plantSuggestion").html('');
+        }
+        
+    });
+// disease suggestion ajax call
+    $('#diseaseName').keyup(function() {
+        var query = $(this).val();
+        if(query.length > 0) {
+            $.ajax({
+                url:"ayurmedics/diseaseSuggestions.php",
+                type:'GET',
+                data: { 'query': query},
+                success: function(data){
+                    if(data !== ""){
+                        console.log(data);
+                        var suggestions = JSON.parse(data);
+                        var suggestionsHtml = '';
+                        for(var i=0; i<suggestions.length; i++){
+                            suggestionsHtml +=  " " + suggestions[i] + "  " ;
+                        }
+                        $('#diseaseSuggestion').html(suggestionsHtml);
+                    }else {
+                        $('#diseaseSuggestion').html('');
+                    }
+                }
+            });
+        }else{
+            $("#diseaseSuggestion").html('');
         }
         
     });
