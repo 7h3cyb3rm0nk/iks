@@ -50,7 +50,7 @@ include("header.php");
 
     <!-- remedies search form -->
     <section class="remediesSearchForm  flex flex-col text-left">
-    <form action="ayurmedics/getDiseases.php" method="get" class="flex flex-row gap-4 justify-start">
+    <form action="ayurmedics/getDiseases.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
         <label for="diseaseName" class="text-slate-800 font-bold mb-2">Search Remedies for:</label>
         <div class="flex">
             <input type="text" name="diseaseName" id="diseaseName" class="rounded-md px-2 mr-2">
@@ -113,7 +113,9 @@ include("header.php");
         }
         
     });
-// disease suggestion ajax call
+
+
+   // disease suggestion ajax call
     $('#diseaseName').keyup(function() {
         var query = $(this).val();
         if(query.length > 0) {
