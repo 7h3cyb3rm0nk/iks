@@ -52,6 +52,7 @@
        } else{
         echo "<h1 class='text-3xl font-bold text-orange-900 bg-slate-200 rounded-lg h-fit p-4'>NO PLANTS FOUND</h1>";
        }
+       $stmt->close();
         
 
     }
