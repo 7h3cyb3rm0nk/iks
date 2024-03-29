@@ -8,7 +8,3 @@ $database = "indian-knowledge-system";
 
 
 $mysqli = new mysqli($host, $username, $password, $database);
-
-
-
-?>
