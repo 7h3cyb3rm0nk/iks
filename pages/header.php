@@ -6,6 +6,7 @@
             <rect class="rounded-lg" y="60" width="100" height="20" fill="white"></rect>
         </svg>
         <div class="menu-list rounded-lg text-gray-200 sm:mb-5 translate-x-[-150%] fixed left-0 px-3 pt-8 transition-all duration-1000 text-xl min-h-screen ml-0 z-10 py-5 flex justify-center items-center pb-6 ">
+
             <div class="list px-12 mb-12 text-gray-200 py-[5em] duration-1000 rounded-md min-h-fit bg-zinc-500 shadow-lg flex gap-10  bottom-10  ">
                 <ul class="grid gap-12 list-disc transition-all duration-300">
                     <li class=" hover:text-slate-800 cursor-pointer transition-all duration-300 hover:translate-y-[-4px] active:translate-y-[-1px]" id="ayurmedics">Ayurmedics</li>
