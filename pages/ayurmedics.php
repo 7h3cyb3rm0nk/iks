@@ -93,7 +93,7 @@ include("header.php");
                 <section class='col-span-2 hidden mt-6' id='{$row['name']}-desc'>
                 
                 </section>
-                <section id='{$row['name']}' class='know-more text-sky-800 font-semibold cursor-pointer mt-4 col-span-2 ml-4 hover:text-sky-950'>Know More..</section>
+                <section id='{$row['name']}' class='show-more text-sky-800 font-semibold cursor-pointer mt-4 col-span-2 ml-4 hover:text-sky-950'>Show more...</section>
                 </div>
 
                 ";
@@ -175,10 +175,11 @@ include("header.php");
 
     // ajax call for fetching plant description
 
-    $(".know-more").click(function() {
+    $(".show-more").click(function() {
         
         var plantName = $(this).attr('id');
         var descContainer = $(this).siblings(`#${plantName}-desc`);
+        var showContainer = $(this)
 
         $.ajax({
             url:"ayurmedics/getPlantDescription.php",
@@ -186,7 +187,14 @@ include("header.php");
             data: {"query": plantName},
             success: function(data) {
                 descContainer.html(data);
-                descContainer.show();
+                descContainer.toggleClass('hidden');
+                if(descContainer.hasClass('hidden')) {
+                    showContainer.html('Show more...');
+                    
+                }
+                else {
+                    showContainer.html('Show less');
+                }
             },
             error: function(xhr, status, error) {
                 console.error(error);
