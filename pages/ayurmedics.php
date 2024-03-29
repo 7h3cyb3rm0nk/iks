@@ -89,9 +89,11 @@ include("header.php");
                 </section>
                 <section class='plantScientificName text-slate-700 ml-4 text-xl font-semibold'><span class='text-slate-950'>Scientific Name:</span> {$row['scientific_name']}</section>
                 </div>
-                <section id='{$row['name']}' class='know-more text-sky-800 font-semibold cursor-pointer mt-4 col-span-2 ml-4 hover:text-sky-950'>Know More..</section>
-                <section class='col-span-2 hidden' id='{$row['name']}-desc'>
+               
+                <section class='col-span-2 hidden mt-6' id='{$row['name']}-desc'>
+                
                 </section>
+                <section id='{$row['name']}' class='know-more text-sky-800 font-semibold cursor-pointer mt-4 col-span-2 ml-4 hover:text-sky-950'>Know More..</section>
                 </div>
 
                 ";
