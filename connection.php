@@ -1,7 +1,8 @@
 <?php
+$env = parse_ini_file('.env');
 
-$username = "ramees";
-$password = "ramees";
+$username = $env['USERNAME'];
+$password = $env['PASSWORD'];
 $host = "localhost";
 $database = "indian-knowledge-system";
 
