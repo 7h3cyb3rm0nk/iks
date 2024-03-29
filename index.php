@@ -11,7 +11,7 @@ require("connection.php");
     <title>Admin | AyurMeds</title>
     <link rel="stylesheet" href="/css/styles.css?v=<?= time(); ?>">
 
-</head>
+
 
 
 <body class="min-h-screen bg-gray-200 ">
