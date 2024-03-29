@@ -73,7 +73,7 @@ include("header.php");
     <!-- this container holds all the list of plants -->
     <div class="plantsListContainer overflow-auto flex flex-cols items-start justify-center gap-12 py-[3em]">
         <?php
-        $sql = "select * from plants";
+        $sql = "select * from plants order by name asc";
         $stmt = $mysqli->prepare($sql);
         $stmt->execute();
         $result = $stmt->get_result();
