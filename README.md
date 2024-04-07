@@ -44,25 +44,25 @@ iks
 
 ---
 
-**## index.php**
+## index.php
 
 The index page for ayurmedics.
 
 ---
 
-**## connection.php**
+## connection.php
 
 The connection information for the SQL object.
 
 ---
 
-**## sql-schema/**
+## sql-schema/
 
 DB structure.
 
 ---
 
-**### js/**
+### js/
 
 - JavaScript script files
 - `scripts.js` - Scripts for the navbar
@@ -70,13 +70,13 @@ DB structure.
 
 ---
 
-**## assets/**
+## assets/
 
 Images and other assets for use.
 
 ---
 
-**## api/**
+## api/
 
 - APIs for each section
 - `getPlantDescriptionApi.php` - For fetching plant descriptions
@@ -85,9 +85,9 @@ Images and other assets for use.
 
 ---
 
-**## pages/**
+## pages/
 
-**### Pages for each section**
+### Pages for each section
 
 - Ayurmedics
 - Art forms
@@ -96,16 +96,16 @@ Images and other assets for use.
 
 ---
 
-**## pages/ayurmedics/**
+## pages/ayurmedics/
 
-**### Sub-pages for the ayurmedics section**
+### Sub-pages for the ayurmedics section
 
 - `getPlants.php`
 - `getDiseases.php`
 
 ---
 
-**## css/**
+## css/
 
 - `base.css` - Base Tailwind CSS file
 - `styles.css` - Tailwind output CSS file
