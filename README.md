@@ -45,18 +45,25 @@ iks
     └── styles.css
 
 ```
+---
 
 ### index.php
 
-the index page for ayurmedics
+    the index page for ayurmedics
+
+--- 
 
 ### connection.php
 
-the connection information for sql object
+    the connection information for sql object
+
+--- 
 
 ### sql-schema 
 
-DB structure
+    DB structure
+
+---
 
 ### js
 
@@ -64,9 +71,13 @@ DB structure
     - scripts.js - scripts for the navbar
     - jquery.js 
 
+--- 
+
 ### assests
 
 images and other assets for use
+
+---
 
 ### api
  
@@ -74,6 +85,8 @@ images and other assets for use
        - getPlantDescriptionApi.php - for fetching plant description 
        - diseaseSuggestionsApi.php - for suggestions for diseases in remedy search section in ayurmedics
        - plantSuggestionsApi.php  - for suggestions in plants in plant search section in ayurmedics
+
+---
 
 ### pages
 
@@ -83,14 +96,15 @@ pages for each section
    - First Aids
    - Yoga
 
+---
+
 #### pages/ayurmedics
 
 sub pages for ayurmedics section
  - getPlants.php
  - getDiseases.php
 
-
-
+---
 
 ### Css
 
