@@ -1,4 +1,4 @@
-Sure, here's the data of 20 common diseases along with the remedies using the plants mentioned earlier, each presented in Markdown format:
+
 
 1. **Diabetes Mellitus**
 
@@ -162,9 +162,7 @@ si
 - Ashwagandha: Drink ashwagandha tea or take ashwagandha supplements to help reduce symptoms of depression and anxiety. Ashwagandha roots can also be boiled in milk or water for depression relief.
 - Jatamansi: Inhale the aroma of jatamansi essential oil or use jatamansi oil for aromatherapy to help uplift mood and reduce symptoms of depression. Jatamansi powder can also be consumed with warm milk or water for added benefits.
 
-These remedies offer natural alternatives for managing various common diseases, utilizing the healing properties of traditional Ayurvedic plants.
 
-Certainly! Here are 20 more common diseases along with remedies using the plants mentioned earlier, each presented in Markdown format:
 
 21. **Constipation**
 
@@ -288,4 +286,87 @@ Certainly! Here are 20 more common diseases along with remedies using the plants
 - Triphala: Drink triphala tea or take triphala supplements regularly to promote regular bowel movements and alleviate symptoms of hemorrhoids. Triphala powder can also be consumed with warm water for added benefits.
 - Nagarmotha: Consume nagarmotha tea or nagarmotha supplements to help reduce inflammation and soothe symptoms of hemorrhoids. Nagarmotha roots can also be boiled in water for added relief.
 
-These remedies offer natural alternatives for managing various common diseases and conditions, utilizing the healing properties of traditional Ayurvedic plants.
+
+
+36. **Anemia**
+
+**Remedy Plants:** Punarnava, Amla
+
+**Usage Details:** 
+- Punarnava: Consume punarnava extract or punarnava capsules regularly to help increase hemoglobin levels and alleviate symptoms of anemia. Punarnava leaves can also be boiled in water for consumption.
+- Amla: Drink amla juice or consume amla powder regularly to boost iron absorption and support the production of red blood cells. Amla can also be consumed raw or added to salads for added benefits.
+
+37. **Gallstones**
+
+**Remedy Plants:** Kutki, Triphala
+
+**Usage Details:** 
+- Kutki: Take kutki powder or kutki capsules regularly to support liver health and promote the dissolution of gallstones. Kutki tea can also be prepared by steeping kutki roots in hot water.
+- Triphala: Drink triphala tea or take triphala supplements regularly to promote healthy digestion and prevent the formation of gallstones. Triphala powder can also be consumed with warm water for added benefits.
+
+38. **Vertigo**
+
+**Remedy Plants:** Brahmi Booti, Shankhpushpi
+
+**Usage Details:** 
+- Brahmi Booti: Consume brahmi booti powder or brahmi booti capsules regularly to help improve blood circulation to the brain and alleviate symptoms of vertigo. Brahmi booti tea can also be prepared by steeping brahmi booti leaves in hot water.
+- Shankhpushpi: Drink shankhpushpi tea or take shankhpushpi supplements regularly to promote relaxation and reduce symptoms of vertigo. Shankhpushpi oil can also be applied topically for added benefits.
+
+39. **Varicose Veins**
+
+**Remedy Plants:** Guggulu, Nagarmotha
+
+**Usage Details:** 
+- Guggulu: Consume guggulu supplements regularly to support vascular health and reduce inflammation associated with varicose veins. Guggulu resin can also be applied topically on affected areas for relief.
+- Nagarmotha: Drink nagarmotha tea or take nagarmotha supplements to improve blood circulation and alleviate symptoms of varicose veins. Nagarmotha roots can also be boiled in water for consumption.
+
+40. **Dandruff**
+
+**Remedy Plants:** Neem, Aloe Vera
+
+**Usage Details:** 
+- Neem: Apply neem oil or neem paste onto the scalp regularly to help reduce dandruff and soothe scalp irritation. Neem leaves can also be boiled in water for hair rinse.
+- Aloe Vera: Massage aloe vera gel or aloe vera extract onto the scalp to moisturize and nourish the scalp, reducing dandruff. Aloe vera juice can also be consumed internally for added benefits.
+
+41. **Obesity**
+
+**Remedy Plants:** Triphala, Guggulu
+
+**Usage Details:** 
+- Triphala: Drink triphala tea or take triphala supplements regularly to support healthy digestion and promote weight loss. Triphala powder can also be consumed with warm water for added benefits.
+- Guggulu: Consume guggulu supplements regularly to boost metabolism and reduce body fat accumulation. Guggulu resin can also be chewed raw or boiled in water for added benefits.
+
+42. **Gastric Ulcers**
+
+**Remedy Plants:** Yashtimadhu, Kutki
+
+**Usage Details:** 
+- Yashtimadhu: Chew on dried licorice root or drink licorice tea to help soothe gastric ulcers and reduce gastric irritation. Licorice supplements can also be taken for added benefits.
+- Kutki: Consume kutki powder or kutki capsules regularly to help heal gastric ulcers and promote digestive health. Kutki tea can also be prepared by steeping kutki roots in hot water.
+
+43. **Hypothyroidism**
+
+**Remedy Plants:** Kanchanara, Ashwagandha
+
+**Usage Details:** 
+- Kanchanara: Consume kanchanara powder or kanchanara capsules regularly to support thyroid function and alleviate symptoms of hypothyroidism. Kanchanara bark can also be boiled in water for consumption.
+- Ashwagandha: Drink ashwagandha tea or take ashwagandha supplements regularly to help regulate thyroid hormone levels and improve energy levels. Ashwagandha roots can also be boiled in milk for added benefits.
+
+44. **Sinusitis**
+
+**Remedy Plants:** Tulsi, Vacha
+
+**Usage Details:** 
+- Tulsi: Inhale the steam of tulsi-infused water or use tulsi oil for steam therapy to help clear sinus congestion and reduce inflammation. Tulsi leaves can also be chewed raw for added benefits.
+- Vacha: Inhale the aroma of vacha essential oil or use vacha oil for steam therapy to help open up nasal passages and relieve sinus pressure. Vacha powder can also be consumed with warm water for added
+
+ benefits.
+
+45. **Insomnia**
+
+**Remedy Plants:** Jatamansi, Shankhpushpi
+
+**Usage Details:** 
+- Jatamansi: Inhale the aroma of jatamansi essential oil or use jatamansi oil for aromatherapy to help promote relaxation and improve sleep quality. Jatamansi powder can also be consumed with warm milk or water before bedtime.
+- Shankhpushpi: Drink shankhpushpi tea or take shankhpushpi supplements regularly to calm the nervous system and promote restful sleep. Shankhpushpi oil can also be applied topically on the forehead for added benefits.
+
