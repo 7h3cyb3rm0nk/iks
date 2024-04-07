@@ -10,7 +10,7 @@ include("../connection.php");
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/jquery.js"></script>
 </head>
-<body class="bg-gray-50 min-h-screen h-screen">
+<body class="bg-slate-200 min-h-screen h-screen">
 
 <?php
 include("header.php");
@@ -26,18 +26,18 @@ include("header.php");
     </section>
 
 <!-- search for plants/ remedies -->
-    <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] overflow-hidden h-[50vh] min-w-[80vw] snap-always snap-center  rounded-lg p-4 ">   
-       <div class="head w-full md:w-fit shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row">Search Plants/Remedies</div>
+    <section class=" m-5 bg-cover shadow-lg min-h-[80vh] overflow-hidden h-[50vh] min-w-[80vw] snap-always snap-center  rounded-lg p-4 " style="background-image: url('../assets/jpgs/search-bg.jpg');">   
+       <div class="head w-full md:w-fit shadow-md mx-auto  bg-slate-900 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row bg-opacity-90">Search Plants/Remedies</div>
 
 
 
     <!-- section containing forms -->
     <section class="flex flex-col items-center justify-center h-full text-2xl ">
-    <div class="forms flex flex-col gap-12 align-start">
+    <div class="forms flex flex-col gap-12 align-start bg-gray-200 p-5 rounded-lg bg-opacity-85 shadow-xl">
     <!-- plant search form -->
-    <section class="plantSearchform text-left">
+    <section class="plantSearchform text-left ">
     <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
-        <label for="plantName" class="text-slate-800 font-bold mb-2">Search Plants:</label>
+        <label for="plantName" class="text-slate-900 font-bold mb-2">Search Plants:</label>
         <div class="flex">
             <input type="text" name="plantName" id="plantName"  class="rounded-md px-2 mr-2">
             <input type="submit" value="Search" name="plantSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
@@ -45,20 +45,20 @@ include("header.php");
         </div>
         
     </form>
-    <aside class="flex-none font-bold text-xl mt-2 text-gray-700 "  >Suggestions:<span id="plantSuggestion"></span></aside>
+    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 "  >Suggestions:<span id="plantSuggestion"></span></aside>
     </section>
 
     <!-- remedies search form -->
     <section class="remediesSearchForm  flex flex-col text-left">
     <form action="ayurmedics/getDiseases.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
-        <label for="diseaseName" class="text-slate-800 font-bold mb-2">Search Remedies for:</label>
+        <label for="diseaseName" class="text-slate-900 font-bold mb-2">Search Remedies for:</label>
         <div class="flex">
             <input type="text" name="diseaseName" id="diseaseName" class="rounded-md px-2 mr-2">
             <input type="submit" value="Search" name="diseaseSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
         </div>
         
     </form>
-    <aside class="flex-none font-bold text-xl mt-2 text-gray-700 " >Suggestions: <span id="diseaseSuggestion"> </span></aside>
+    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 " >Suggestions: <span id="diseaseSuggestion"> </span></aside>
     </section>
     </div>
     </section>
@@ -68,7 +68,7 @@ include("header.php");
     
 
 <!-- Plants List -->
-    <section class=" m-5 bg-gray-300 shadow-lg min-h-[80vh] min-w-[80vw] snap-center snap-always   rounded-lg p-4 ">
+    <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-scroll scroll-smooth snap-y snap-mandatory " style="background-image: url('../assets/jpgs/plants-bg.jpg');">
     <div class="head w-full md:w-fit shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row">Plants</div>
     <!-- this container holds all the list of plants -->
     <div class="plantsListContainer overflow-auto flex flex-cols items-start justify-center gap-12 py-[3em]">
@@ -81,7 +81,7 @@ include("header.php");
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()){
                 echo "
-                <div class='bg-white w-[44%] rounded-md shadow-md p-4 grid grid-cols-2 grid-flow-row-dense ' >
+                <div class='bg-white w-[44%] rounded-md shadow-xl p-4 grid grid-cols-2  bg-opacity-90 snap-always snap-start grid-flow-row-dense ' >
                 <section class='text-slate-800 font-bold text-xl plantName col-span-2'>{$row['name']}</section>
                 <div class='col-span-2 flex items-center justify-start  '>
                 <section class='w-[7em] h-[8em]'>
