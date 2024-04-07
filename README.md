@@ -62,7 +62,7 @@ DB structure.
 
 ---
 
-### js/
+## js/
 
 - JavaScript script files
 - `scripts.js` - Scripts for the navbar
