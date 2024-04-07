@@ -74,7 +74,7 @@ The index page for ayurmedics.
 
 ---
 
-**## connection.php**
+## connection.php
 
 The connection information for the SQL object.
 
@@ -117,7 +117,7 @@ assets and data for diseases
 
 ---
 
-**## pages/**
+## pages/
 
 ### Pages for each section
 - Header - navbar for iks
@@ -128,7 +128,7 @@ assets and data for diseases
 
 ---
 
-**## pages/ayurmedics/**
+## pages/ayurmedics/
 
 ### Sub-pages for the ayurmedics section
 
@@ -137,7 +137,7 @@ assets and data for diseases
 
 ---
 
-**## css/**
+## css/
 
 - `base.css` - Base Tailwind CSS file
 - `styles.css` - Tailwind output CSS file
