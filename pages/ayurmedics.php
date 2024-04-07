@@ -121,7 +121,7 @@ include("header.php");
         var query = $(this).val();
         if(query.length > 0) {
             $.ajax({
-                url:"ayurmedics/plantSuggestions.php",
+                url:"../api/plantSuggestionsApi.php",
                 type:'GET',
                 data: { 'query': query},
                 success: function(data){
@@ -150,7 +150,7 @@ include("header.php");
         var query = $(this).val();
         if(query.length > 0) {
             $.ajax({
-                url:"ayurmedics/diseaseSuggestions.php",
+                url:"../api/diseaseSuggestionsApi.php",
                 type:'GET',
                 data: { 'query': query},
                 success: function(data){
@@ -182,7 +182,7 @@ include("header.php");
         var showContainer = $(this)
 
         $.ajax({
-            url:"ayurmedics/getPlantDescription.php",
+            url:"../api/getPlantDescriptionApi.php",
             type: "get",
             data: {"query": plantName},
             success: function(data) {
