@@ -1,10 +1,7 @@
-# iks
+Sure, I can help you make the markdown file structure look even prettier. Here's the updated version with some formatting improvements:
 
-## IKS FILE STRUCTURE
 ```
 iks
-├── php
-│   └── get.php
 ├── tailwind.config.js
 ├── README.md
 ├── index.php
@@ -43,55 +40,55 @@ iks
 └── css
     ├── base.css
     └── styles.css
-
 ```
 
 ---
 
-## index.php
+**## index.php**
 
-the index page for ayurmedics
-
---- 
-
-## connection.php
-
-the connection information for sql object
-
---- 
-
-## sql-schema/ 
-
-DB structure
+The index page for ayurmedics.
 
 ---
 
-### js/
+**## connection.php**
 
-- js script files
-    - scripts.js - scripts for the navbar
-    - jquery.js 
-
---- 
-
-## assests/
-
-images and other assets for use
+The connection information for the SQL object.
 
 ---
 
-## api/
- 
-   - apis for each section
-       - getPlantDescriptionApi.php - for fetching plant description 
-       - diseaseSuggestionsApi.php - for suggestions for diseases in remedy search section in ayurmedics
-       - plantSuggestionsApi.php  - for suggestions in plants in plant search section in ayurmedics
+**## sql-schema/**
+
+DB structure.
 
 ---
 
-## pages/
+**### js/**
 
-### pages for each section
+- JavaScript script files
+- `scripts.js` - Scripts for the navbar
+- `jquery.js`
+
+---
+
+**## assets/**
+
+Images and other assets for use.
+
+---
+
+**## api/**
+
+- APIs for each section
+- `getPlantDescriptionApi.php` - For fetching plant descriptions
+- `diseaseSuggestionsApi.php` - For suggestions for diseases in the remedy search section in ayurmedics
+- `plantSuggestionsApi.php` - For suggestions for plants in the plant search section in ayurmedics
+
+---
+
+**## pages/**
+
+**### Pages for each section**
+
 - Ayurmedics
 - Art forms
 - First Aids
@@ -99,16 +96,16 @@ images and other assets for use
 
 ---
 
-## pages/ayurmedics/
+**## pages/ayurmedics/**
 
-### sub pages for ayurmedics section
-- getPlants.php
-- getDiseases.php
+**### Sub-pages for the ayurmedics section**
+
+- `getPlants.php`
+- `getDiseases.php`
 
 ---
 
-## css/
+**## css/**
 
-- base.css - base tailwind css file
-- styles.css - tailwind output css file
-
+- `base.css` - Base Tailwind CSS file
+- `styles.css` - Tailwind output CSS file
