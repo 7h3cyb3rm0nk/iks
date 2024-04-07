@@ -45,23 +45,24 @@ iks
     └── styles.css
 
 ```
+
 ---
 
-### index.php
+## index.php
 
-    the index page for ayurmedics
-
---- 
-
-### connection.php
-
-    the connection information for sql object
+the index page for ayurmedics
 
 --- 
 
-### sql-schema 
+## connection.php
 
-    DB structure
+the connection information for sql object
+
+--- 
+
+## sql-schema 
+
+DB structure
 
 ---
 
@@ -73,13 +74,13 @@ iks
 
 --- 
 
-### assests
+## assests
 
 images and other assets for use
 
 ---
 
-### api
+## api
  
    - apis for each section
        - getPlantDescriptionApi.php - for fetching plant description 
@@ -88,26 +89,26 @@ images and other assets for use
 
 ---
 
-### pages
+## pages
 
-pages for each section
-   - Ayurmedics
-   - Art forms
-   - First Aids
-   - Yoga
-
----
-
-#### pages/ayurmedics
-
-sub pages for ayurmedics section
- - getPlants.php
- - getDiseases.php
+### pages for each section
+- Ayurmedics
+- Art forms
+- First Aids
+- Yoga
 
 ---
 
-### Css
+## pages/ayurmedics
 
-   - base.css - base tailwind css file
-   - styles.css - tailwind output css file
+### sub pages for ayurmedics section
+- getPlants.php
+- getDiseases.php
+
+---
+
+## Css
+
+- base.css - base tailwind css file
+- styles.css - tailwind output css file
 
