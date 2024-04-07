@@ -832,6 +832,7 @@ video {
   height: 100vh;
 }
 
+<<<<<<< HEAD
 <<<<<<<
 .max-h-\[80w\]{
   max-height: 80w;
@@ -846,6 +847,12 @@ video {
 =======
 
 >>>>>>>
+=======
+.h-\[80vh\]{
+  height: 80vh;
+}
+
+>>>>>>> 319cae1 (feat: add styles)
 .max-h-fit{
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -1111,6 +1118,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-scroll{
+  overflow: scroll;
+}
+
 .scroll-smooth{
   scroll-behavior: smooth;
 }
@@ -1251,6 +1262,7 @@ video {
   background-color: rgb(113 113 122 / var(--tw-bg-opacity));
 }
 
+<<<<<<< HEAD
 .bg-gray-500{
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
@@ -1297,8 +1309,35 @@ video {
 =======
 
 >>>>>>>
+=======
+.bg-slate-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+>>>>>>> 319cae1 (feat: add styles)
 .bg-opacity-80{
   --tw-bg-opacity: 0.8;
+}
+
+.bg-opacity-95{
+  --tw-bg-opacity: 0.95;
+}
+
+.bg-opacity-75{
+  --tw-bg-opacity: 0.75;
+}
+
+.bg-opacity-55{
+  --tw-bg-opacity: 0.55;
+}
+
+.bg-opacity-90{
+  --tw-bg-opacity: 0.9;
+}
+
+.bg-opacity-85{
+  --tw-bg-opacity: 0.85;
 }
 
 .bg-gradient-to-b{
@@ -1355,6 +1394,10 @@ video {
   background-position: bottom;
 }
 
+.bg-center{
+  background-position: center;
+}
+
 .bg-no-repeat{
   background-repeat: no-repeat;
 }
@@ -1405,6 +1448,10 @@ video {
 
 .p-\[20px\]{
   padding: 20px;
+}
+
+.p-5{
+  padding: 1.25rem;
 }
 
 .px-1{
@@ -1615,6 +1662,11 @@ video {
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
+.text-gray-50{
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
 .text-gray-700{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -1674,6 +1726,7 @@ video {
   color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
+<<<<<<< HEAD
 .text-slate-950{
   --tw-text-opacity: 1;
   color: rgb(2 6 23 / var(--tw-text-opacity));
@@ -1684,8 +1737,43 @@ video {
 =======
 
 >>>>>>>
+=======
+.text-orange-200{
+  --tw-text-opacity: 1;
+  color: rgb(254 215 170 / var(--tw-text-opacity));
+}
+
+.text-orange-400{
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
+}
+
+.text-green-50{
+  --tw-text-opacity: 1;
+  color: rgb(240 253 244 / var(--tw-text-opacity));
+}
+
+.text-amber-300{
+  --tw-text-opacity: 1;
+  color: rgb(252 211 77 / var(--tw-text-opacity));
+}
+
+.text-gray-800{
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+>>>>>>> 319cae1 (feat: add styles)
 .opacity-90{
   opacity: 0.9;
+}
+
+.opacity-70{
+  opacity: 0.7;
+}
+
+.opacity-95{
+  opacity: 0.95;
 }
 
 .shadow-lg{
@@ -1700,15 +1788,27 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-xl{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
+<<<<<<< HEAD
 <<<<<<<
 .drop-shadow-md{
   --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+=======
+.backdrop-filter{
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+>>>>>>> 319cae1 (feat: add styles)
 }
 
 .transition-\[0\.4s\]{
