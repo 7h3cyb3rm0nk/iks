@@ -60,13 +60,13 @@ the connection information for sql object
 
 --- 
 
-## sql-schema 
+## sql-schema/ 
 
 DB structure
 
 ---
 
-### js
+### js/
 
 - js script files
     - scripts.js - scripts for the navbar
@@ -74,13 +74,13 @@ DB structure
 
 --- 
 
-## assests
+## assests/
 
 images and other assets for use
 
 ---
 
-## api
+## api/
  
    - apis for each section
        - getPlantDescriptionApi.php - for fetching plant description 
@@ -89,7 +89,7 @@ images and other assets for use
 
 ---
 
-## pages
+## pages/
 
 ### pages for each section
 - Ayurmedics
@@ -99,7 +99,7 @@ images and other assets for use
 
 ---
 
-## pages/ayurmedics
+## pages/ayurmedics/
 
 ### sub pages for ayurmedics section
 - getPlants.php
@@ -107,7 +107,7 @@ images and other assets for use
 
 ---
 
-## Css
+## css/
 
 - base.css - base tailwind css file
 - styles.css - tailwind output css file
