@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 08, 2024 at 07:33 AM
+-- Generation Time: Apr 08, 2024 at 07:39 AM
 -- Server version: 11.2.2-MariaDB
 -- PHP Version: 8.3.2
 
@@ -111,16 +111,17 @@ CREATE TABLE `first-aid` (
 CREATE TABLE `plants` (
   `name` varchar(255) NOT NULL,
   `scientific_name` varchar(255) NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `image` varchar(500) DEFAULT NULL
 ) ;
 
 --
 -- Dumping data for table `plants`
 --
 
-INSERT INTO `plants` (`name`, `scientific_name`, `description`) VALUES
-('Neem', 'Azadirachta indica', '<p>\r\nAzadirachta indica, commonly known as neem, margosa, nimtree or Indian lilac, is a tree in the mahogany family Meliaceae. It is one of two species in the genus Azadirachta.\r\n</p>\r\n<p>\r\n It is native to the Indian subcontinent and to parts of Southeast Asia, but is naturalized and grown around the world in tropical and subtropical areas. Its fruits and seeds are the source of neem oil. Nim is a Hindustani noun derived from Sanskrit nimba\r\n</p>'),
-('Thulasi', 'Ocimum tenuiflorum', '<p>\r\nOcimum tenuiflorum, commonly known as holy basil or tulsi, is an aromatic perennial plant in the family Lamiaceae.It is native to tropical and subtropical regions of Australia, Malesia, Asia, and the western Pacific. It is widely cultivated throughout the Southeast Asian tropics.This plant has escaped from cultivation and has naturalized in many tropical regions of the Americas.\r\n</p>\r\n<p>\r\n It is an agricultural and environmental weed.Tulasi is cultivated for religious and traditional medicine purposes, and also for its essential oil. It is widely used as a herbal tea, commonly used in Ayurveda, and has a place within the Vaishnava tradition of Hinduism, in which devotees perform worship involving holy basil plants or leaves.\r\n</p>\r\n');
+INSERT INTO `plants` (`name`, `scientific_name`, `description`, `image`) VALUES
+('Neem', 'Azadirachta indica', '<p>\r\nAzadirachta indica, commonly known as neem, margosa, nimtree or Indian lilac, is a tree in the mahogany family Meliaceae. It is one of two species in the genus Azadirachta.\r\n</p>\r\n<p>\r\n It is native to the Indian subcontinent and to parts of Southeast Asia, but is naturalized and grown around the world in tropical and subtropical areas. Its fruits and seeds are the source of neem oil. Nim is a Hindustani noun derived from Sanskrit nimba\r\n</p>', ''),
+('Thulasi', 'Ocimum tenuiflorum', '<p>\r\nOcimum tenuiflorum, commonly known as holy basil or tulsi, is an aromatic perennial plant in the family Lamiaceae.It is native to tropical and subtropical regions of Australia, Malesia, Asia, and the western Pacific. It is widely cultivated throughout the Southeast Asian tropics.This plant has escaped from cultivation and has naturalized in many tropical regions of the Americas.\r\n</p>\r\n<p>\r\n It is an agricultural and environmental weed.Tulasi is cultivated for religious and traditional medicine purposes, and also for its essential oil. It is widely used as a herbal tea, commonly used in Ayurveda, and has a place within the Vaishnava tradition of Hinduism, in which devotees perform worship involving holy basil plants or leaves.\r\n</p>\r\n', '');
 
 --
 -- Indexes for dumped tables
