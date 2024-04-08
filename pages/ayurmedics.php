@@ -7,8 +7,8 @@ include("../connection.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IKS | Ayurmedics</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/jquery.js"></script>
 </head>
 <body class="bg-slate-200 min-h-screen h-screen">
 
@@ -26,7 +26,7 @@ include("header.php");
     </section>
 
 <!-- search for plants/ remedies -->
-    <section class=" m-5 bg-cover shadow-lg min-h-[80vh] overflow-hidden h-[50vh] min-w-[80vw] snap-always snap-center  rounded-lg p-4 " style="background-image: url('../assets/jpgs/search-bg.jpg');">   
+    <section class=" m-5 bg-cover shadow-lg min-h-[80vh] overflow-hidden h-[50vh] min-w-[80vw] snap-always snap-center  rounded-lg p-4 " style="background-image: url('/assets/jpgs/search-bg.jpg');">   
        <div class="head w-full md:w-fit shadow-md mx-auto  bg-slate-900 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row bg-opacity-90">Search Plants/Remedies</div>
 
 
@@ -68,10 +68,10 @@ include("header.php");
     
 
 <!-- Plants List -->
-    <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-scroll scroll-smooth snap-y snap-mandatory " style="background-image: url('../assets/jpgs/plants-bg.jpg');">
-    <div class="head w-full md:w-fit shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row">Plants</div>
+    <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-scroll  scroll-smooth snap-y snap-mandatory " style="background-image: url('/assets/jpgs/plants-bg.jpg');">
+    <div class="head w-full md:w-fit shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row ">Plants</div>
     <!-- this container holds all the list of plants -->
-    <div class="plantsListContainer overflow-auto flex flex-cols items-start justify-center gap-12 py-[3em]">
+    <div class="plantsListContainer overflow-y-auto h-fit grid sm:grid-cols-3 items-start justify-center gap-12 py-[3em]  dm:px-[3em]">
         <?php
         $sql = "select * from plants order by name asc";
         $stmt = $mysqli->prepare($sql);
@@ -91,11 +91,11 @@ include("header.php");
             while($row = $result->fetch_assoc()){
                 $sectionId = replace_spaces($row['name']);
                 echo "
-                <div class='bg-white w-[44%] rounded-md shadow-xl p-4 grid grid-cols-2  bg-opacity-90 snap-always snap-start grid-flow-row-dense ' >
-                <section class='text-slate-800 font-bold text-xl plantName col-span-2'>{$row['name']}</section>
+                <div class='bg-white  rounded-md shadow-xl p-4 grid grid-cols-2  bg-opacity-90 snap-always snap-start grid-flow-row-dense ' >
+                <section class='text-slate-800 font-bold text-2xl plantName col-span-2'>{$row['name']}</section>
                 <div class='col-span-2 flex items-center justify-start  '>
                 <section class='w-[7em] h-[8em]'>
-                <img src='https://google.com' class='h-[100%] w-[100%]'>
+                <img src='/{$row['image']}' class='h-[100%] w-[100%] rounded-lg'>
                 </section>
                 <section class='plantScientificName text-slate-700 ml-4 text-xl font-semibold'><span class='text-slate-950'>Scientific Name:</span> {$row['scientific_name']}</section>
                 </div>
