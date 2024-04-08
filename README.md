@@ -1,67 +1,45 @@
 
 
+```
 iks
+├── tailwind.config.js
+├── README.md
+├── index.php
 ├── connection.php
+├── sql-schema
+│   └── indian-knowledge-system.sql
+├── js
+│   ├── jquery.js
+│   └── scripts.js
 ├── assets
 │   ├── images-art-forms-jpg
 │   │   ├── kathakali.jpg
 │   │   └── Mohiniattam.jpg
-│   ├── pngs
-│   │   ├── main-bg.png
-│   │   ├── plants-bg.png
-│   │   └── ayurveda.png
-│   ├── plants
-│   │   ├── tith_begun.jpg
-│   │   ├── garlic.jpg
-│   │   ├── bashok.png
-│   │   ├── arjun.jpg
-│   │   ├── thankuni_pata.jpg
-│   │   ├── bitter_gourd.png
-│   │   ├── README.md
-│   │   ├── amla.jpg
-│   │   ├── beal.jpg
-│   │   ├── tulsi.jpg
-│   │   ├── aloe_vera.jpg
-│   │   ├── swarna_lata.jpg
-│   │   ├── bitter_leaf.jpg
-│   │   ├── black_cohos.jpg
-│   │   ├── warning.png
-│   │   ├── neem.jpg
-│   │   └── ic_arrow_right.png
-│   ├── diseases
-│   │   └── README.md
-│   └── jpgs
-│       ├── plants-bg.jpg
-│       ├── ayurveda.jpg
-│       └── search-bg.jpg
-├── css
-│   ├── base.css
-│   └── styles.css
-├── php
-│   └── get.php
-├── index.php
-├── sql-schema
-│   └── indian-knowledge-system.sql
+│   ├── jpgs
+│   │   ├── plants-bg.jpg
+│   │   ├── ayurveda.jpg
+│   │   └── search-bg.jpg
+│   └── pngs
+│       ├── plants-bg.png
+│       ├── ayurveda.png
+│       └── main-bg.png
 ├── api
-│   ├── diseaseSuggestionsApi.php
 │   ├── getPlantDescriptionApi.php
+│   ├── diseaseSuggestionsApi.php
 │   └── plantSuggestionsApi.php
-├── README.md
-├── js
-│   ├── jquery.js
-│   └── scripts.js
-├── tailwind.config.js
-└── pages
-    ├── header.php
-    ├── ayurmedics.php
-    ├── first-aids.php
-    ├── yoga.php
-    ├── ayurmedics
-    │   ├── getDiseases.php
-    │   └── getPlants.php
-    ├── artforms.php
-    └── art-forms.php
-
+├── pages
+│   ├── art-forms.php
+│   ├── first-aids.php
+│   ├── ayurmedics.php
+│   ├── yoga.php
+│   ├── header.php
+│   ├── ayurmedics
+│   │   ├── getDiseases.php
+│   │   └── getPlants.php
+│   └── artforms.php
+└── css
+    ├── base.css
+    └── styles.css
 ```
 
 ---
@@ -96,14 +74,6 @@ DB structure.
 
 Images and other assets for use.
 
-## assets/plants
-
-assets and data for plants 
-
-## assets/diseases 
-
-assets and data for diseases
-
 ---
 
 ## api/
@@ -118,7 +88,7 @@ assets and data for diseases
 ## pages/
 
 ### Pages for each section
-- Header - navbar for iks
+
 - Ayurmedics
 - Art forms
 - First Aids
