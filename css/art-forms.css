@@ -64,13 +64,8 @@ button {
 }
 
 @-moz-document url-prefix() {
-    .carousel .list .item .content .description {
-        margin-top: -35px;
-        /* Adjusted margin for Firefox */
-    }
-
-    .submit-button {
-        font-size: 0.7rem;
+    #prev_next_buttons {
+        left: 3rem;
     }
 }
 
