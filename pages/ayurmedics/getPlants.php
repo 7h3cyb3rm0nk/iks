@@ -18,7 +18,7 @@
 
        
 
-        $sql = "select distinct plants.name , plants.scientific_name, plants.description from plants where plants.name = ?";
+        $sql = "select distinct plants.name , plants.scientific_name, plants.description, plants.image from plants where plants.name = ?";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param("s", $plantName);
         $stmt->execute();   
@@ -34,7 +34,7 @@
             echo "
             <section class='bg-gray-100 w-[80%] min-h-[65vh] overflow-auto mx-auto rounded-md shadow-md p-4 grid grid-cols-8 gap-8 grid-rows-2'>
             <div class='text-3xl flex flex-col col-span-2 font-extrabold text-zinc-800 '>$plantName
-            <img src='https://pixabay.com/vectors/group-user-icon-person-personal-2935521/'  class='h-[8em] rounded'>
+            <img src='../../{$row['image']}'  class='h-[8em] rounded'>
             </div>
             <div class='col-span-6 flex  ml-8 text-2xl items-center justify-start'>
             <section class='font-semibold self-center'>Scientific Name: <span class='text-slate-700 font-bold'> $plantScientificName </span></section>
