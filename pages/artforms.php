@@ -9,6 +9,7 @@ include("../connection.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IKS | Art Forms</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/art-forms.css?v=<?= time() ?>">
 </head>
@@ -134,7 +135,7 @@ include("../connection.php");
                     </div>
                 </div>
             </div>
-            <div class="absolute bottom-[15%] left-16 w-[300px] max-w-[30%] flex items-center gap-2 z-20" id="prev_next_buttons">
+            <div class="absolute bottom-[15%] left-16 w-[300px] max-w-[30%] flex items-center gap-2 z-20">
                 <button id="prev" class="w-16 h-16 rounded-[50%] bg-[#eee6] text-white hover:bg-white hover:text-black transition-all ease-in-out delay-75 hover:scale-105 active:scale-110">&#60;</button>
                 <button id="next" class="w-16 h-16 rounded-[50%] bg-[#eee6] text-white hover:bg-white hover:text-black transition-all ease-in-out delay-75 hover:scale-105 active:scale-110">&#62;</button>
             </div>
