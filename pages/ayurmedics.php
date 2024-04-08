@@ -77,9 +77,19 @@ include("header.php");
         $stmt = $mysqli->prepare($sql);
         $stmt->execute();
         $result = $stmt->get_result();
+        // functions to parse spaces for id names
+        function replace_spaces($string) {
+            $string = str_replace(" ", "-", $string);
+            return $string;
+        }
+        function replace_dashes($string) {
+            $string = str_replace("-", " ", $string);
+            return $string;
+        }
 
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()){
+                $sectionId = replace_spaces($row['name']);
                 echo "
                 <div class='bg-white w-[44%] rounded-md shadow-xl p-4 grid grid-cols-2  bg-opacity-90 snap-always snap-start grid-flow-row-dense ' >
                 <section class='text-slate-800 font-bold text-xl plantName col-span-2'>{$row['name']}</section>
@@ -90,7 +100,7 @@ include("header.php");
                 <section class='plantScientificName text-slate-700 ml-4 text-xl font-semibold'><span class='text-slate-950'>Scientific Name:</span> {$row['scientific_name']}</section>
                 </div>
                
-                <section class='col-span-2 hidden mt-6' id='{$row['name']}-desc'>
+                <section class='col-span-2 hidden mt-6' id='{$sectionId}-desc'>
                 
                 </section>
                 <section id='{$row['name']}' class='show-more text-sky-800 font-semibold cursor-pointer mt-4 col-span-2 ml-4 hover:text-sky-950'>Show more...</section>
@@ -178,7 +188,8 @@ include("header.php");
     $(".show-more").click(function() {
         
         var plantName = $(this).attr('id');
-        var descContainer = $(this).siblings(`#${plantName}-desc`);
+        var plantDesc = plantName.replace(/\s+/g, '-');
+        var descContainer = $(this).siblings(`#${plantDesc}-desc`);
         var showContainer = $(this)
 
         $.ajax({
