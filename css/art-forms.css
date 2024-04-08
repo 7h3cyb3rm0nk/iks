@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins';
+}
+
+.carousel,
+.search-section,
+.search-result-section {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+img {
+    border-radius: 8px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    top: 7%;
+    left: 5%;
+    width: 51%;
+    max-width: 1140px;
+    /* padding-right: 30%; */
+    color: #fff;
+    text-shadow: 0px 5px 10px #0004;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.carousel .list .item .content .description p {
+    margin-bottom: 1rem;
+}
+
+@-moz-document url-prefix() {
+    .carousel .list .item .content .description {
+        margin-top: -35px;
+        /* Adjusted margin for Firefox */
+    }
+
+    .submit-button {
+        font-size: 0.7rem;
+    }
+}
+
+.carousel .list .item .content .heading_carousel {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    padding-bottom: 0.5rem;
+}
+
+.carousel .list .item .content .buttons button {
+    border: 1px solid #eee;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.5s, background-color 0.5s, transform 0.5s;
+    /* Adjusted transition property */
+}
+
+.carousel .list .item .content .buttons button:hover {
+    color: #000;
+    background-color: #eee;
+    transform: translateY(-4px);
+}
+
+.carousel .list .item .content .buttons button:active {
+    transform: translateY(-5px);
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    bottom: 10px;
+    left: 7px;
+    /* right: 10px; */
+}
+
+.thumbnail .item .content .title {
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+.arrows {
+    position: absolute;
+    /* top: 80%; */
+    bottom: 5%;
+    left: 4.5%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 5;
+}
+
+.arrows button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #eee4;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+    transform: background-color 0.6s, color 0.6s;
+    cursor: pointer;
+}
+
+.arrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* next section searching */
+/* .search-section {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: rgba(148, 144, 144, 0.267);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+} */
+.search-section {
+    /* background-color: rgba(148, 144, 144, 0.267); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    /* background-color: #0f0f0f; */
+    background-image: url(../assets/images-art-forms-jpg/kalamkari_background.jpg);
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.search-section form {
+    display: flex;
+    justify-content: center;
+}
+
+.searching-container {
+    display: flex;
+    width: 1140px;
+    max-width: 40%;
+    /* align-items: center; */
+    padding: 14px;
+    border-radius: 28px;
+    background-color: #f6f6f6;
+    /* background-color: #fff; */
+    /* vertical-align: middle; */
+    transition: box-shadow 0.4s, background-color 0.4s;
+}
+
+.searching-container:focus-within {
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.search-input {
+    font-size: 16px;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 18rem;
+}
+
+.search-input::placeholder,
+.search-icon {
+    color: #00000073;
+}
+
+.submit-button {
+    padding: 7px 10px;
+    width: 7rem;
+    margin-left: 1rem;
+    border-radius: 24px;
+    border: none;
+    background-color: #0b64f4;
+    color: #fefefe;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: backgorund-color 0.5s, transform 0.5s;
+}
+
+.submit-button:hover {
+    background-color: hsl(224, 76%, 48%);
+    transform: translateY(-4px);
+}
+
+.submit-button:active {
+    transform: translateY(-5px);
+}
+
+/* The following styles is dedicated to the final section */
+/* .search-result-section {
+    overflow: auto;
+}
+
+.search-result-section img {
+    float: left;
+    width: 90%;
+    max-width: 350px;
+    height: 80%;
+    max-height: 450px;
+    object-fit: cover;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.result-heading {
+    font-weight: bold;
+    font-size: large;
+    text-decoration: underline;
+}
+
+.result-container {
+    font-size: 20px;
+    padding: 15px;
+} */
+.search-result-section {
+    padding: 1.5rem;
+    overflow: auto;
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+}
+
+.search-result-img {
+    width: 100%;
+    max-width: 475px;
+    height: auto;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    float: left;
+}
+
+.result-details {
+    max-width: 100%;
+}
+
+.result-heading {
+    font-weight: 700;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.result-content p {
+    margin-bottom: 1rem;
+}
+
+/* animation */
+
+.carousel .list .item:nth-child(1) {
+    z-index: 5;
+}
+
+.carousel .list .item:nth-child(1) .content .buttons,
+.carousel .list .item:nth-child(1) .content .description,
+.carousel .list .item:nth-child(1) .content .heading_carousel {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: ShowContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes ShowContent {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.carousel .list .item:nth-child(1) .content .heading_carousel {
+    animation-delay: 1.3s;
+}
+
+.carousel .list .item:nth-child(1) .content .description {
+    animation-delay: 1.5s;
+}
+
+.carousel .list .item:nth-child(1) .content .buttons {
+    animation-delay: 1.7s;
+}
+
+/* next effect animation */
+
+.carousel .next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: ShowImage 0.5s linear 1s forwards;
+}
+
+@keyframes ShowImage {
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.carousel .prev .list .item:nth-child(2) {
+    z-index: 6;
+}
