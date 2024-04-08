@@ -52,7 +52,6 @@ button {
     left: 5%;
     width: 51%;
     max-width: 1140px;
-    /* padding-right: 30%; */
     color: #fff;
     text-shadow: 0px 5px 10px #0004;
     font-size: 16px;
@@ -86,7 +85,6 @@ button {
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.5s, background-color 0.5s, transform 0.5s;
-    /* Adjusted transition property */
 }
 
 .carousel .list .item .content .buttons button:hover {
@@ -126,7 +124,6 @@ button {
     position: absolute;
     bottom: 10px;
     left: 7px;
-    /* right: 10px; */
 }
 
 .thumbnail .item .content .title {
@@ -137,7 +134,6 @@ button {
 
 .arrows {
     position: absolute;
-    /* top: 80%; */
     bottom: 5%;
     left: 4.5%;
     width: 300px;
@@ -166,26 +162,11 @@ button {
     color: #000;
 }
 
-/* next section searching */
-/* .search-section {
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100%;
-    overflow: hidden;
-    background-color: rgba(148, 144, 144, 0.267);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5px;
-} */
 .search-section {
-    /* background-color: rgba(148, 144, 144, 0.267); */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 5px;
-    /* background-color: #0f0f0f; */
     background-image: url(../assets/images-art-forms-jpg/kalamkari_background.jpg);
     object-fit: cover;
     margin-bottom: 5px;
@@ -200,12 +181,9 @@ button {
     display: flex;
     width: 1140px;
     max-width: 40%;
-    /* align-items: center; */
     padding: 14px;
     border-radius: 28px;
     background-color: #f6f6f6;
-    /* background-color: #fff; */
-    /* vertical-align: middle; */
     transition: box-shadow 0.4s, background-color 0.4s;
 }
 
@@ -251,32 +229,6 @@ button {
     transform: translateY(-5px);
 }
 
-/* The following styles is dedicated to the final section */
-/* .search-result-section {
-    overflow: auto;
-}
-
-.search-result-section img {
-    float: left;
-    width: 90%;
-    max-width: 350px;
-    height: 80%;
-    max-height: 450px;
-    object-fit: cover;
-    margin-right: 15px;
-    margin-bottom: 5px;
-}
-
-.result-heading {
-    font-weight: bold;
-    font-size: large;
-    text-decoration: underline;
-}
-
-.result-container {
-    font-size: 20px;
-    padding: 15px;
-} */
 .search-result-section {
     padding: 1.5rem;
     overflow: auto;
