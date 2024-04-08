@@ -140,7 +140,7 @@ include("header.php");
                         var suggestions = JSON.parse(data);
                         var suggestionsHtml = '';
                         for(var i=0; i<suggestions.length; i++){
-                            suggestionsHtml +=  " " + suggestions[i] + "  " ;
+                            i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
                         }
                         $('#plantSuggestion').html(suggestionsHtml);
                     }else {
@@ -169,7 +169,7 @@ include("header.php");
                         var suggestions = JSON.parse(data);
                         var suggestionsHtml = '';
                         for(var i=0; i<suggestions.length; i++){
-                            suggestionsHtml +=  " " + suggestions[i] + "  " ;
+                            i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
                         }
                         $('#diseaseSuggestion').html(suggestionsHtml);
                     }else {
