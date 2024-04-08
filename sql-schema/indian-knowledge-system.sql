@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 20, 2024 at 02:42 PM
+-- Generation Time: Apr 08, 2024 at 07:33 AM
 -- Server version: 11.2.2-MariaDB
 -- PHP Version: 8.3.2
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -20,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `indian-knowledge-system`
 --
-CREATE DATABASE IF NOT EXISTS `indian-knowledge-system` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `indian-knowledge-system`;
 
 -- --------------------------------------------------------
 
@@ -29,12 +26,11 @@ USE `indian-knowledge-system`;
 -- Table structure for table `art-form-details`
 --
 
-DROP TABLE IF EXISTS `art-form-details`;
 CREATE TABLE `art-form-details` (
   `name` varchar(500) NOT NULL,
   `description` varchar(500) NOT NULL,
   `image` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='details about various art forms in india';
+) ;
 
 -- --------------------------------------------------------
 
@@ -42,10 +38,9 @@ CREATE TABLE `art-form-details` (
 -- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `type` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ;
 
 --
 -- Dumping data for table `categories`
@@ -61,27 +56,20 @@ INSERT INTO `categories` (`type`) VALUES
 -- Table structure for table `details`
 --
 
-DROP TABLE IF EXISTS `details`;
 CREATE TABLE `details` (
   `plant` varchar(200) NOT NULL,
   `category` varchar(200) NOT NULL,
   `disease` varchar(200) NOT NULL,
   `usagedetails` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ;
 
 --
 -- Dumping data for table `details`
 --
 
 INSERT INTO `details` (`plant`, `category`, `disease`, `usagedetails`) VALUES
-('thulasi', 'grass', 'fever', 'test data'),
-('thulasi', 'grass', 'fever', 'test data'),
-('thulasi', 'grass', 'fever', 'test data'),
-('thulasi', 'grass', 'fever', 'hello'),
-('thulasi', 'grass', 'fever', 'test data'),
-('thulasi', 'grass', 'fever', 'hekkiidfhdjfhjlf\r\n'),
-('thulasi', 'grass', 'cough', 'hello'),
-('thulasi', 'grass', 'cough', 'hello');
+('Thulasi', 'shrub', 'fever', 'boil leaves of thulasi breathe it in'),
+('Neem', 'grass', 'fever', 'boil neem leaves');
 
 -- --------------------------------------------------------
 
@@ -89,10 +77,9 @@ INSERT INTO `details` (`plant`, `category`, `disease`, `usagedetails`) VALUES
 -- Table structure for table `diseases`
 --
 
-DROP TABLE IF EXISTS `diseases`;
 CREATE TABLE `diseases` (
   `name` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='list of diseases';
+) ;
 
 --
 -- Dumping data for table `diseases`
@@ -108,13 +95,12 @@ INSERT INTO `diseases` (`name`) VALUES
 -- Table structure for table `first-aid`
 --
 
-DROP TABLE IF EXISTS `first-aid`;
 CREATE TABLE `first-aid` (
   `injury-id` int(11) NOT NULL,
   `injury-type` varchar(500) NOT NULL,
   `first-aid-procedure` text NOT NULL,
   `precautions` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='details for first aid procedures';
+) ;
 
 -- --------------------------------------------------------
 
@@ -122,18 +108,19 @@ CREATE TABLE `first-aid` (
 -- Table structure for table `plants`
 --
 
-DROP TABLE IF EXISTS `plants`;
 CREATE TABLE `plants` (
   `name` varchar(255) NOT NULL,
-  `scientific_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='list of plant names';
+  `scientific_name` varchar(255) NOT NULL,
+  `description` text NOT NULL
+) ;
 
 --
 -- Dumping data for table `plants`
 --
 
-INSERT INTO `plants` (`name`, `scientific_name`) VALUES
-('thulasi', 'Ocimum tenuiflorum');
+INSERT INTO `plants` (`name`, `scientific_name`, `description`) VALUES
+('Neem', 'Azadirachta indica', '<p>\r\nAzadirachta indica, commonly known as neem, margosa, nimtree or Indian lilac, is a tree in the mahogany family Meliaceae. It is one of two species in the genus Azadirachta.\r\n</p>\r\n<p>\r\n It is native to the Indian subcontinent and to parts of Southeast Asia, but is naturalized and grown around the world in tropical and subtropical areas. Its fruits and seeds are the source of neem oil. Nim is a Hindustani noun derived from Sanskrit nimba\r\n</p>'),
+('Thulasi', 'Ocimum tenuiflorum', '<p>\r\nOcimum tenuiflorum, commonly known as holy basil or tulsi, is an aromatic perennial plant in the family Lamiaceae.It is native to tropical and subtropical regions of Australia, Malesia, Asia, and the western Pacific. It is widely cultivated throughout the Southeast Asian tropics.This plant has escaped from cultivation and has naturalized in many tropical regions of the Americas.\r\n</p>\r\n<p>\r\n It is an agricultural and environmental weed.Tulasi is cultivated for religious and traditional medicine purposes, and also for its essential oil. It is widely used as a herbal tea, commonly used in Ayurveda, and has a place within the Vaishnava tradition of Hinduism, in which devotees perform worship involving holy basil plants or leaves.\r\n</p>\r\n');
 
 --
 -- Indexes for dumped tables
