@@ -135,7 +135,7 @@ include("../connection.php");
                     </div>
                 </div>
             </div>
-            <div class="absolute bottom-[15%] left-16 w-[300px] max-w-[30%] flex items-center gap-2 z-20">
+            <div class="absolute bottom-[15%] left-16 w-[300px] max-w-[30%] flex items-center gap-2 z-20" id="prev_next_buttons">
                 <button id="prev" class="w-16 h-16 rounded-[50%] bg-[#eee6] text-white hover:bg-white hover:text-black transition-all ease-in-out delay-75 hover:scale-105 active:scale-110">&#60;</button>
                 <button id="next" class="w-16 h-16 rounded-[50%] bg-[#eee6] text-white hover:bg-white hover:text-black transition-all ease-in-out delay-75 hover:scale-105 active:scale-110">&#62;</button>
             </div>
