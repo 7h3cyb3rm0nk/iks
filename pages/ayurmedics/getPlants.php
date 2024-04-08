@@ -10,7 +10,7 @@
 <?php include __DIR__ . "/../header.php"; ?> 
 <!-- section to display content -->
 
-<section class="plantContent bg-slate-300 h-full py-12 flex justify-center">
+<section class="plantContent bg-slate-300 h-full py-12 flex justify-center" style="background-image:url('../../assets/jpgs/plants-bg.jpg');">
     <?php
     require_once __DIR__ . "/../../connection.php";
     if(filter_has_var(INPUT_GET, 'plantName')) {
@@ -32,11 +32,11 @@
 
             // display as list
             echo "
-            <section class='bg-gray-100 w-[80%] min-h-[65vh] overflow-auto mx-auto rounded-md shadow-md p-4 grid grid-cols-8 gap-8 grid-rows-2'>
-            <div class='text-3xl flex flex-col col-span-2 font-extrabold text-zinc-800 '>$plantName
-            <img src='../../{$row['image']}'  class='h-[8em] rounded'>
+            <section class='bg-gray-100 bg-opacity-90  w-[80%] min-h-[65vh] overflow-auto mx-auto rounded-md shadow-lg p-4 grid grid-cols-1 sm:grid-cols-8 gap-8 grid-rows-2' >
+            <div class='text-3xl flex flex-col sm:col-span-2 font-extrabold text-zinc-800 col-span-4'>$plantName
+            <img src='../../{$row['image']}'  class='sm:h-[8em] h-[4em] sm:w-fit mt-4 w-[6em] rounded'>
             </div>
-            <div class='col-span-6 flex  ml-8 text-2xl items-center justify-start'>
+            <div class='sm:col-span-6 flex  ml-8 text-2xl items-center justify-start'>
             <section class='font-semibold self-center'>Scientific Name: <span class='text-slate-700 font-bold'> $plantScientificName </span></section>
             
             </div>
