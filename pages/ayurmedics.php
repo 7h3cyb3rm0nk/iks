@@ -91,7 +91,7 @@ include("header.php");
             while($row = $result->fetch_assoc()){
                 $sectionId = replace_spaces($row['name']);
                 echo "
-                <div class='bg-white  rounded-md shadow-xl p-4 grid grid-cols-2  bg-opacity-90 snap-always snap-start grid-flow-row-dense ' >
+                <div class='bg-white  rounded-md shadow-xl p-4 grid grid-cols-2 hover:scale-105  bg-opacity-90 snap-always snap-start grid-flow-row-dense ' >
                 <section class='text-slate-800 font-bold text-2xl plantName col-span-2'>{$row['name']}</section>
                 <div class='col-span-2 flex items-center justify-start  '>
                 <section class='w-[7em] h-[8em]'>
