@@ -1,7 +1,7 @@
 let redirectLists = document.querySelectorAll("li");
 redirectLists.forEach((listItem) => {
     listItem.addEventListener("click", () => {
-        window.location.href = `../iks/pages/${listItem.id}.php`;
+        window.location.href = `/pages/${listItem.id}.php`;
     })
 
 })
