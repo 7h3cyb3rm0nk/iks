@@ -199,7 +199,7 @@ button {
     outline: none;
     border: none;
     background: transparent;
-    width: 18rem;
+    width: 25rem;
 }
 
 .search-input::placeholder,
