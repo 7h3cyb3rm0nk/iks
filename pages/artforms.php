@@ -1,6 +1,3 @@
-<?php
-include("../connection.php");
-?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
@@ -11,6 +8,7 @@ include("../connection.php");
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/art-forms.css?v=<?= time() ?>">
+    <script src="../js/jquery.js"></script>
 </head>
 
 <body>
@@ -19,7 +17,7 @@ include("../connection.php");
     include("header.php");
     ?>
     <section>
-        <div class="carousel prev">
+        <div class="carousel">
             <div class="list">
                 <div class="item">
                     <img src="../assets/images-art-forms-jpg/Kathakali.jpg" alt="Kathakali">
@@ -141,28 +139,47 @@ include("../connection.php");
         </div>
     </section>
     <section class="search-section">
-        <form action="" method="get">
+        <form action="../pages/artforms/searchresult.php" method="get" id="selectionform">
             <div class="searching-container">
                 <span class="search-icon material-symbols-outlined">
                     search
                 </span>
-                <input type="text" placeholder="Search the Art-form" class="search-input">
+                <input type="text" placeholder="Search the Art-form" class="search-input" name="search-input" id="search-input" autocomplete="off">
             </div>
-            <input type="submit" class="w-[7rem] ml-4 bg-[#0b64f4] text-white px-4 py-2 rounded-[24px] hover:bg-[#1d4fd7] active:bg-[bg-[#1d4fd7]] hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-[2px]" value="SEARCH">
+            <input type="submit" class="w-[7rem] ml-4 bg-[#0b64f4] text-white px-4 py-2 rounded-[24px] hover:bg-[#1d4fd7] active:bg-[bg-[#1d4fd7]] hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-[2px]" value="SEARCH" name="submit">
         </form>
     </section>
-    <section class="search-result-section">
-        <img src="../assets/images-art-forms-jpg/Kathakali.jpg" alt="Kathakali" class="search-result-img">
-        <div class="result-details">
-            <h2 class="result-heading">Kathakali(16th Century)</h2>
-            <div class="result-content">
-                <p>Kathakali, a vibrant classical dance-drama form, emerged in Kerala, India during the 16th century. While its exact origins are debated, scholars believe it developed from temple rituals and folk art traditions, reaching its fully elaborated style around this period.Early performances were likely linked to temple offerings, specifically Krishnanattam, a dance drama dedicated to the Hindu god Krishna. Over time, themes broadened to encompass stories from the Mahabharata, Ramayana, and other Hindu mythology.Traditionally, Kathakali performances were all-night affairs held in temple courtyards or open-air theatres. Today, they are often shorter, catering to wider audiences. The stage is minimal, with the focus entirely on the actors and the captivating storytelling.</p>
-                <p>The actors, all male, undergo rigorous training in dance, music, and acting. Their elaborate costumes are a sight to behold, featuring colorful headgear, billowing skirt-like garments, and intricate facial makeup that reflects the character's nature - divine, demonic, or heroic.Mudras, expressive hand gestures, and drishti bhedas, captivating eye movements, are central to conveying the narrative. Vocalists provide rhythmic chants (called bhagavadar) that narrate the story, while percussion instruments like the maddalam (drum) and chengala (gong) create a powerful and dramatic soundscape.</p>
-                <p>Kathakali boasts a rich lineage of maestros who have dedicated their lives to preserving and promoting this art form. Masters like Guru Kelu Nair, known for his exceptional footwork, and Vazhenkadu Kunju Nair, a renowned performer and teacher, are just a few examples.Traditionally prevalent among the Nair caste of Kerala, Kathakali has transcended these boundaries and is celebrated throughout the state. It's deeply embedded in Kerala's cultural identity and is a major draw for tourists. Watching a Kathakali performance is a unique window into Kerala's rich heritage and storytelling traditions.</p>
-                <p>Kathakali is not just a performance; it's an immersive experience. Many tourists visit Kerala specifically to witness this art form. Several centers offer workshops where visitors can learn basic mudras and movements, gaining a deeper appreciation for the dedication and artistry involved.Beyond tourism, Kathakali holds immense importance. It's a powerful medium for transmitting cultural values, religious narratives, and ancient stories to new generations. This exquisite art form ensures that Kerala's legacy of dance, drama, and mythology continues to flourish.</p>
-            </div>
-        </div>
-    </section>
+    <script>
+        $(document).ready(function() {
+            $('#selectionform').submit(function(event) {
+                event.preventDefault();
+
+                var info = $('#search-input').val();
+
+                if (info.length !== "") {
+                    console.log(info)
+                    $.ajax({
+                        url: '../api/artformsdescription.php',
+                        type: 'GET',
+                        data: {
+                            'query': info
+                        },
+                        success: function(data) {
+                            if (data !== "") {
+                                console.log(data);
+                                $('#search-result-section').remove();
+                                $('body').append(data);
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(error);
+                        },
+
+                    })
+                }
+            })
+        })
+    </script>
     <script src="../js/art-form.js"></script>
 </body>
 
