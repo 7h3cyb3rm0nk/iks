@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IKS | Art Forms</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css?v=<?= time() ?>">
     <link rel="stylesheet" href="../css/art-forms.css?v=<?= time() ?>">
     <script src="../js/jquery.js"></script>
 </head>
@@ -151,14 +151,16 @@
     </section>
     <!-- ajax call -->
     <script>
+        // $(document).ready(function() { ... }): This is a jQuery function that runs when the DOM is fully loaded and ready to be manipulated. It ensures that the code inside it will execute only after the DOM has been fully loaded.
         $(document).ready(function() {
             $('#selectionform').submit(function(event) {
+                // prevents the default behavior of form submission which is reloading the page
                 event.preventDefault();
+                // value from the form element having the id search-input is fetched 
+                var info = $('#search-input').val().trim();
 
-                var info = $('#search-input').val();
-
-                if (info.length !== "") {
-                    console.log(info)
+                if (info !== "") {
+                    console.log(info);
                     $.ajax({
                         url: '../api/artformsdescription.php',
                         type: 'GET',
@@ -174,12 +176,16 @@
                         },
                         error: function(xhr, status, error) {
                             console.error(error);
-                        },
-
-                    })
+                        }
+                    });
+                } else {
+                    // Update the placeholder text of the input field
+                    $('#search-input').attr('placeholder', 'Input is empty. Please enter a valid search query.').css('color', '#ff0000');;
+                    // Set the text color of the placeholder
+                    $('#search-result-section').remove();
                 }
-            })
-        })
+            });
+        });
     </script>
     <script src="../js/art-form.js"></script>
 </body>
