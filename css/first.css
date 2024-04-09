@@ -11,8 +11,7 @@
     margin-top: 5px;
     background-image: url(../assets/first-aids-img/make-med.jpg);
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: cover;
     margin-bottom: 5px;
     background-position: center center;
-    
 }

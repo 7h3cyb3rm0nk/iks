@@ -10,10 +10,10 @@
     <link rel="stylesheet"  href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"/>
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
 </head>
-<body class="h-screen overflow-hidden flex items-center justify-center bg-yellow-950">
+<body class="h-screen overflow-hidden flex items-center justify-center bg-amber-950">
 <!-- <section class="h-[100h] max-h-full w-[100vh] max-w-full">
     <div class=" w-full h-full rounded-lg" id="search-section">
-     <div class="pt-2 mx-auto text-gray-600">
+     <div class="pt-2 mx-auto text-gray-600"> 
         <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
           type="search" name="search" placeholder="Search">
         <button type="submit" class="relative right-12   mt-5 ml-4">
@@ -29,10 +29,10 @@
       </div>
 </section>   -->
 <section class="search-section">
-        <form action="" method="get">
+        <form action="first-aids-values/injuryDisplay.php" method="get">
 
-            <input class="border-1 border-gray-300 bg-white h-12 w-[30rem] px-5 pr-18 rounded-full text-sm hover:scale-105 active: scale-110 delay-[50] ease-in-out transition-all placeholder:text-gray-600 hover:ring-white"
-            type="search" name="search" placeholder="Enter the injury">
+            <input class="border-1 border-gray-300 bg-white h-12 w-[30rem] px-5 pr-18 rounded-full text-sm hover:scale-105 active: scale-110 delay-[50] outline:none ease-in-out transition-all placeholder:text-gray-600 hover:ring-white"
+            type="search" name="health" placeholder="Enter your health issue">
             <button type="submit" class="right-12 mt-5 ml-4">
             <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
@@ -41,13 +41,13 @@
             </svg>
             </button>
             <button
-                class="middle none center rounded-full bg-yellow-950 py-3 px-8 hover:scale-105 font-sans text-lg font-bold uppercase text-white transition-all focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                class="middle none center rounded-full bg-purple-700 py-3 px-8 hover:scale-105 hover:bg-purple-800 font-sans text-lg font-bold uppercase text-white transition-all focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             data-ripple-light="true"
             >
             SEARCH
             </button>
 
-        </form>
+        </form> 
 </section>    
 </body>
 </html>
