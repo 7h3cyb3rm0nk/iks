@@ -575,6 +575,19 @@ video {
   height: 100vh;
 }
 
+.h-\[20vh\]{
+  height: 20vh;
+}
+
+.h-max{
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.h-\[100vh\]{
+  height: 100vh;
+}
+
 .max-h-fit{
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -602,6 +615,22 @@ video {
 }
 
 .min-h-screen{
+  min-height: 100vh;
+}
+
+.min-h-\[35vh\]{
+  min-height: 35vh;
+}
+
+.min-h-\[20vh\]{
+  min-height: 20vh;
+}
+
+.min-h-\[50vh\]{
+  min-height: 50vh;
+}
+
+.min-h-\[100vh\]{
   min-height: 100vh;
 }
 
@@ -765,6 +794,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
 .place-items-center{
   place-items: center;
 }
@@ -815,6 +848,10 @@ video {
 
 .gap-8{
   gap: 2rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
 }
 
 .self-center{
@@ -1103,6 +1140,11 @@ video {
   padding-bottom: 5em;
 }
 
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-2{
   padding-bottom: 0.5rem;
 }
@@ -1327,6 +1369,11 @@ video {
 
 .hover\:translate-y-\[-4px\]:hover{
   --tw-translate-y: -4px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:translate-x-1:hover{
+  --tw-translate-x: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
