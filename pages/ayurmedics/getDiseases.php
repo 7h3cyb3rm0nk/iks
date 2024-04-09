@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plants | Ayurmedics | IKS</title>
+    <title>Remedies | Ayurmedics | IKS</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body class="min-h-screen ">
 <?php include __DIR__ . "/../header.php"; ?> 
+<section class='plantContent bg-slate-300 w-full overflow-auto min-h-[100vh] py-12 flex flex-row flex-wrap-start gap-3  px-12  justify-center' style="background-image:url('../../../assets/jpgs/plants-bg.jpg');">
+
 <!-- section to display content -->
 
 
@@ -18,7 +20,7 @@
 
        
 
-        $sql = "select plants.name, plants.scientific_name, details.usagedetails from plants inner join details on details.plant = plants.name where details.disease = ?";
+        $sql = "select plants.name, plants.scientific_name,plants.image, details.usagedetails from plants inner join details on details.plant = plants.name where details.disease = ?";
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param("s", $diseaseName);
         $stmt->execute();   
@@ -32,11 +34,10 @@
 
             // display as list
             echo "
-            <section class='plantContent bg-slate-300 h-full py-12 flex flex-col justify-center'>
-
-            <section class='bg-gray-100 w-[80%] min-h-[65vh] overflow-auto mx-auto rounded-md shadow-md p-4 grid grid-cols-8 gap-8 grid-rows-2'>
+            
+            <section class='bg-gray-100 w-[40%] h-[50vh] hover:scale-105 overflow-auto mx-auto rounded-md shadow-md p-4 grid grid-cols-8 gap-8 grid-rows-2 '>
             <div class='text-3xl flex flex-col col-span-2 font-extrabold text-zinc-800 '>$plantName
-            <img src='https://pixabay.com/vectors/group-user-icon-person-personal-2935521/'  class='h-[8em] rounded'>
+            <img src='/{$row['image']}'  class='h-[8em] w-[6em] rounded'>
             </div>
             <div class='col-span-6 flex  ml-8 text-2xl items-center justify-start'>
             <section class='font-semibold self-center'>Scientific Name: <span class='text-slate-700 font-bold'> $plantScientificName </span></section>
@@ -59,7 +60,7 @@
 
     }
     ?>
-
+</section>
 
 <!-- plantContent Section ends -->
 </body>
