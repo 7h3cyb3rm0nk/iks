@@ -11,6 +11,7 @@ include("../connection.php");
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/jquery.js"></script>
 </head>
+
 <body class="bg-slate-200 min-h-screen h-screen">
 
 <body class="bg-slate-200 min-h-screen ">
@@ -34,34 +35,39 @@ include("../connection.php");
 
 
 
-    <!-- section containing forms -->
-    <section class="flex flex-col items-center justify-center h-full text-2xl ">
-    <div class="forms flex flex-col gap-12 align-start bg-gray-200 p-5 rounded-lg bg-opacity-85 shadow-xl">
-    <!-- plant search form -->
-    <section class="plantSearchform text-left ">
-    <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
-        <label for="plantName" class="text-slate-900 font-bold mb-2">Search Plants:</label>
-        <div class="flex">
-            <input type="text" name="plantName" id="plantName"  class="rounded-md px-2 mr-2">
-            <input type="submit" value="Search" name="plantSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
-            
-        </div>
-        
-    </form>
-    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 "  >Suggestions:<span id="plantSuggestion"></span></aside>
-    </section>
+        <!-- section containing forms -->
+        <section class="flex flex-col items-center justify-center h-full text-2xl ">
+            <div class="forms flex flex-col gap-12 align-start bg-gray-200 p-5 rounded-lg bg-opacity-85 shadow-xl">
+                <!-- plant search form -->
+                <section class="plantSearchform text-left ">
+                    <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
+                        <label for="plantName" class="text-slate-900 font-bold mb-2">Search Plants:</label>
+                        <div class="flex">
+                            <input type="text" name="plantName" id="plantName" class="rounded-md px-2 mr-2">
+                            <input type="submit" value="Search" name="plantSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
 
-    <!-- remedies search form -->
-    <section class="remediesSearchForm  flex flex-col text-left">
-    <form action="ayurmedics/getDiseases.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
-        <label for="diseaseName" class="text-slate-900 font-bold mb-2">Search Remedies for:</label>
-        <div class="flex">
-            <input type="text" name="diseaseName" id="diseaseName" class="rounded-md px-2 mr-2">
-            <input type="submit" value="Search" name="diseaseSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
-        </div>
-        
-    </form>
-    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 " >Suggestions: <span id="diseaseSuggestion"> </span></aside>
+                        </div>
+
+                    </form>
+                    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 ">Suggestions:<span id="plantSuggestion"></span></aside>
+                </section>
+
+                <!-- remedies search form -->
+                <section class="remediesSearchForm  flex flex-col text-left">
+                    <form action="ayurmedics/getDiseases.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
+                        <label for="diseaseName" class="text-slate-900 font-bold mb-2">Search Remedies for:</label>
+                        <div class="flex">
+                            <input type="text" name="diseaseName" id="diseaseName" class="rounded-md px-2 mr-2">
+                            <input type="submit" value="Search" name="diseaseSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
+                        </div>
+
+                    </form>
+                    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 ">Suggestions: <span id="diseaseSuggestion"> </span></aside>
+                </section>
+            </div>
+        </section>
+
+
     </section>
 </section>
 </section>
@@ -176,25 +182,7 @@ include("../connection.php");
         var descContainer = $(this).siblings(`#${plantDesc}-desc`);
         var showContainer = $(this)
 
-        $.ajax({
-            url:"../api/getPlantDescriptionApi.php",
-            type: "get",
-            data: {"query": plantName},
-            success: function(data) {
-                descContainer.html(data);
-                descContainer.toggleClass('hidden');
-                if(descContainer.hasClass('hidden')) {
-                    showContainer.html('Show more...');
-                    
-                }
-                else {
-                    showContainer.html('Show less');
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error(error);
-            },
-        });
+        $(".show-more").click(function() {
 
             var plantName = $(this).attr('id');
             var descContainer = $(this).siblings(`#${plantName}-desc`);
