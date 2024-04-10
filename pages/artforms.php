@@ -68,7 +68,7 @@
                 <div class="item">
                     <img src="../assets/images-art-forms-jpg/Koodiyattam.jpg" alt="Koodiyattam">
                     <div class="content">
-                        <div class="heading_carousel">Koodiyattam (14th-16th Century)</div>
+                        <div class="heading_carousel">Koodiyattam (At least 2,000 years old)</div>
                         <div class="description">
                             <p>Koodiyattam, meaning "acting together" in Malayalam, is a remarkable theatre tradition that has endured for centuries in Kerala, India. Believed to be at least 2,000 years old, it holds the title of the oldest surviving Sanskrit theatre form in the world. Koodiyattam offers a captivating glimpse into ancient Indian dramatic traditions and storytelling techniques.</p>
                             <p>The origins of Koodiyattam are closely linked to temple rituals and performance traditions. Some scholars believe it evolved from Koothu, an older temple art form. Over time, Koodiyattam developed into a highly refined art form with codified acting rules and a distinct performance style.</p>
@@ -178,8 +178,7 @@
             </div>
             <input type="submit" class="w-[7rem] ml-4 bg-[#0b64f4] text-white px-4 py-2 rounded-[24px] hover:bg-[#1d4fd7] active:bg-[bg-[#1d4fd7]] hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-[2px]" value="SEARCH" name="submit">
         </form>
-        <aside class="bg-[#f8f8ff] text-slate-800 w-max min-w-36 h-10 m-6 p-7 rounded-lg">
-            <span id="artformsuggestion" class="relative bottom-3">Suggestions: Kathakali</span>
+        <aside class="bg-[#f8f8ff] text-slate-800 w-max min-w-36 h-10 m-6 p-7 rounded-lg hidden" id="artformsuggestion">
         </aside>
 
     </section>
@@ -226,6 +225,29 @@
                     $('#search-result-section').remove();
                 }
             });
+        });
+        // artforms suggestions
+        $('#search-input').keyup(function() { // Use keyup event for real-time suggestions
+            var suggestion = $(this).val();
+            if (suggestion !== "") {
+                $.ajax({
+                    url: '../api/artformSuggestion.php',
+                    type: 'GET',
+                    data: {
+                        'query': suggestion
+                    },
+                    success: function(data) {
+                        console.log(data);
+                        $('#artformsuggestion').html(data); // Replace the content of #artformsuggestion
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            } else {
+                $('#artformsuggestion').html('');
+                $('#artformsuggestion').hide();
+            }
         });
     </script>
 
