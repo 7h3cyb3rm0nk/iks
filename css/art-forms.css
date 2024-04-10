@@ -162,8 +162,13 @@ button {
     color: #000;
 }
 
+.carouseldetail {
+    display: none;
+}
+
 .search-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 5px;
@@ -199,7 +204,7 @@ button {
     outline: none;
     border: none;
     background: transparent;
-    width: 18rem;
+    width: 25rem;
 }
 
 .search-input::placeholder,
