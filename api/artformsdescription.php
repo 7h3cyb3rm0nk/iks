@@ -1,10 +1,15 @@
 <?php
 // connection line
 require_once "../connection.php";
+// $numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 if (isset($_GET['query'])) {
     $input = filter_input(INPUT_GET, 'query', FILTER_SANITIZE_SPECIAL_CHARS);
     $input = trim($input);
+    $input = strtolower($input);
     $input = ucwords($input);
+    // if (ctype_alpha($input)) {
+    //     $flag = 1;
+    // }
     $query = "SELECT * FROM art_details WHERE art_name = '$input'";
     $result = mysqli_query($mysqli, $query);
     if (mysqli_num_rows($result) > 0) {
