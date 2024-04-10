@@ -162,6 +162,10 @@ button {
     color: #000;
 }
 
+.carouseldetail {
+    display: none;
+}
+
 .search-section {
     display: flex;
     flex-direction: column;
