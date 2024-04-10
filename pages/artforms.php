@@ -31,9 +31,10 @@
                             <p>Early performances were likely linked to temple offerings, specifically
                                 Krishnanattam, a dance drama dedicated to the Hindu god Krishna. Over time, themes broadened to encompass stories from the Mahabharata, Ramayana, and other Hindu mythology.</p>
                         </div>
-                        <form action="" method="get" class="buttons">
+                        <form action="" method="get" class="buttons carouselform">
                             <input type="submit" class="bg-transparent text-white border-white border px-4 py-2 rounded-md hover:text-black hover:bg-white active:bg-transparent active:text-black active:bg-white focus:ring-2 focus:ring-slate-500 hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-widest" value="SHOW MORE">
                         </form>
+                        <span class="carouseldetail">Kathakali</span>
                     </div>
                 </div>
                 <div class="item">
@@ -44,9 +45,10 @@
                             <p>Mohiniyattam, a gracefully captivating classical dance form, traces its origins to the 18th century in Kerala, India. Known for its elegance and storytelling beauty, Mohiniyattam translates to "dance of the enchantress" - a fitting name for this art form dedicated to the Hindu goddess Mohini, the enchanting avatar of Vishnu.</p>
                             <p>Legends attribute the creation of Mohiniyattam to the sage Bharata Muni, who documented various dance forms in the ancient Sanskrit text Natya Shastra. While its exact origin story remains debated, Mohiniyattam has flourished in Kerala's temples and courts for centuries. Traditionally, it was a performance art reserved for women from Nair communities. Today, both men and women practice and perform this expressive dance form.</p>
                         </div>
-                        <form action="" method="get" class="buttons">
+                        <form action="" method="get" class="buttons carouselform">
                             <input type="submit" class="bg-transparent text-white border-white border px-4 py-2 rounded-md hover:text-black hover:bg-white active:bg-transparent active:text-black active:bg-white focus:ring-2 focus:ring-slate-500 hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-widest" value="SHOW MORE">
                         </form>
+                        <span class="carouseldetail">Mohiniyattam</span>
                     </div>
                 </div>
                 <div class="item">
@@ -57,9 +59,10 @@
                             <p>Padayani, a vibrant ritual art form, is deeply rooted in the central region of Kerala, India. Emerging from temple rituals and folk traditions, Padayani performances are a captivating blend of dance, music, drama, satire, and elaborate masks. This art form is particularly associated with worship of the goddess Bhadrakali, a powerful Hindu deity.</p>
                             <p>The exact origins of Padayani are debated, but scholars believe it developed sometime around the 16th century. Some theories link it to the rich martial art tradition of Kalaripayattu, while others suggest it emerged from temple rituals dedicated to Bhadrakali. Regardless of its precise beginnings, Padayani has become an integral part of Kerala's cultural identity.</p>
                         </div>
-                        <form action="" method="get" class="buttons">
+                        <form action="" method="get" class="buttons carouselform">
                             <input type="submit" class="bg-transparent text-white border-white border px-4 py-2 rounded-md hover:text-black hover:bg-white active:bg-transparent active:text-black active:bg-white focus:ring-2 focus:ring-slate-500 hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-widest" value="SHOW MORE">
                         </form>
+                        <span class="carouseldetail">Padayani</span>
                     </div>
                 </div>
                 <div class="item">
@@ -70,22 +73,24 @@
                             <p>Koodiyattam, meaning "acting together" in Malayalam, is a remarkable theatre tradition that has endured for centuries in Kerala, India. Believed to be at least 2,000 years old, it holds the title of the oldest surviving Sanskrit theatre form in the world. Koodiyattam offers a captivating glimpse into ancient Indian dramatic traditions and storytelling techniques.</p>
                             <p>The origins of Koodiyattam are closely linked to temple rituals and performance traditions. Some scholars believe it evolved from Koothu, an older temple art form. Over time, Koodiyattam developed into a highly refined art form with codified acting rules and a distinct performance style.</p>
                         </div>
-                        <form action="" method="get" class="buttons">
+                        <form action="" method="get" class="buttons carouselform">
                             <input type="submit" class="bg-transparent text-white border-white border px-4 py-2 rounded-md hover:text-black hover:bg-white active:bg-transparent active:text-black active:bg-white focus:ring-2 focus:ring-slate-500 hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-widest" value="SHOW MORE">
                         </form>
+                        <span class="carouseldetail">Koodiyattam</span>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="../assets/images-art-forms-jpg/Chakyarkoothu.jpg" alt="Chakyarkoothu">
+                    <img src="../assets/images-art-forms-jpg/Chakyar Koothu.jpg" alt="Chakyarkoothu">
                     <div class="content">
                         <div class="heading_carousel">Chakyar Koothu (16th Century)</div>
                         <div class="description">
                             <p>Chakyar Koothu, born in 16th-century Kerala, seamlessly merges epics and stand-up comedy, engaging audiences with social commentary. Held in sacred temple spaces, these performances captivate during festivals.</p>
                             <p>Collaborations between the Chakyar community and Ambalavasi Nambiars further enrich the cultural tapestry of Kerala. Together, they deliver captivating narratives and expressive movements that transcend generations, preserving ancient traditions while resonating with contemporary audiences. </p>
                         </div>
-                        <form action="" method="get" class="buttons">
+                        <form action="" method="get" class="buttons carouselform">
                             <input type="submit" class="bg-transparent text-white border-white border px-4 py-2 rounded-md hover:text-black hover:bg-white active:bg-transparent active:text-black active:bg-white focus:ring-2 focus:ring-slate-500 hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-widest" value="SHOW MORE">
                         </form>
+                        <span class="carouseldetail">Chakyar Koothu</span>
                     </div>
                 </div>
             </div>
@@ -124,7 +129,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="../assets/images-art-forms-jpg/Chakyarkoothu.jpg">
+                    <img src="../assets/images-art-forms-jpg/Chakyar Koothu.jpg">
                     <div class="content">
                         <div class="title">
                             Chakyarkoothu
@@ -138,6 +143,31 @@
             </div>
         </div>
     </section>
+    <script>
+        $(document).ready(function() {
+            $('.carouselform').submit(function(event) {
+                event.preventDefault();
+                var info = $(this).siblings('.carouseldetail').text().trim(); // Using $.trim() to remove leading and trailing whitespace
+                $.ajax({
+                    url: '../api/artformshowmore.php',
+                    type: 'GET', // Consider using POST method if needed
+                    data: {
+                        'query': info
+                    },
+                    success: function(data) {
+                        if (data !== "") {
+                            console.log(data);
+                            $('#search-result-section').remove();
+                            $('body').append(data);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("AJAX Error: " + error);
+                    }
+                });
+            });
+        });
+    </script>
     <section class="search-section">
         <form action="../pages/artforms/searchresult.php" method="get" id="selectionform">
             <div class="searching-container">
@@ -198,6 +228,7 @@
             });
         });
     </script>
+
     <script src="../js/art-form.js"></script>
 </body>
 
