@@ -148,6 +148,10 @@
             </div>
             <input type="submit" class="w-[7rem] ml-4 bg-[#0b64f4] text-white px-4 py-2 rounded-[24px] hover:bg-[#1d4fd7] active:bg-[bg-[#1d4fd7]] hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-[2px]" value="SEARCH" name="submit">
         </form>
+        <aside class="bg-[#f8f8ff] text-slate-800 w-max min-w-36 h-10 m-6 p-7 rounded-lg">
+            <span id="artformsuggestion" class="relative bottom-3">Suggestions: Kathakali</span>
+        </aside>
+
     </section>
     <!-- ajax call -->
     <script>
@@ -158,7 +162,13 @@
                 event.preventDefault();
                 // value from the form element having the id search-input is fetched 
                 var info = $('#search-input').val().trim();
-
+                if (/^\d+$/.test(info)) {
+                    $('#search-input').val('');
+                    $('#search-input').attr('placeholder', 'Enter data consisting of alphabetic characters');
+                    $('#search-result-section').remove();
+                    return false;
+                }
+                // if the info is not an empty string the if section will work
                 if (info !== "") {
                     console.log(info);
                     $.ajax({
@@ -179,8 +189,9 @@
                         }
                     });
                 } else {
+                    // the else section will work when the input field is an empty string
                     // Update the placeholder text of the input field
-                    $('#search-input').attr('placeholder', 'Input is empty. Please enter a valid search query.').css('color', '#ff0000');;
+                    $('#search-input').attr('placeholder', 'Input is empty. Please enter a valid search query.');
                     // Set the text color of the placeholder
                     $('#search-result-section').remove();
                 }
