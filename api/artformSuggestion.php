@@ -1,4 +1,5 @@
 <?php
+// artforms suggestions
 require_once '../connection.php';
 if (isset($_GET['query'])) {
     $input = filter_input(INPUT_GET, 'query', FILTER_SANITIZE_SPECIAL_CHARS);
