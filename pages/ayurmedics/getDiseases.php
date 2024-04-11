@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body class="min-h-screen ">
-<?php include __DIR__ . "/../header.php"; ?> 
+<?php include __DIR__ . "/../header.php"; ?>
+<script src="/js/scripts.js"></script>
 <section class='plantContent bg-slate-300 w-full overflow-auto min-h-[100vh] py-12 flex flex-row flex-wrap-start gap-3  px-12  justify-center' style="background-image:url('../../../assets/jpgs/plants-bg.jpg');">
 
 <!-- section to display content -->
