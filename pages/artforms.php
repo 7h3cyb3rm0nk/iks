@@ -178,7 +178,7 @@
             </div>
             <input type="submit" class="w-[7rem] ml-4 bg-[#0b64f4] text-white px-4 py-2 rounded-[24px] hover:bg-[#1d4fd7] active:bg-[bg-[#1d4fd7]] hover:translate-y-[-4px] active:translate-y-[-5px] hover:scale-105 active:scale-110 transition-all ease-in-out delay-50 tracking-[2px]" value="SEARCH" name="submit">
         </form>
-        <aside class="bg-[#f8f8ff] text-slate-800 max-w-96 min-w-36 min-h-10 h-max m-6 p-7 rounded-lg hidden" id="artformsuggestion">
+        <aside class="bg-[#f8f8ff] text-slate-800 max-w-6xl min-w-36 min-h-10 h-max m-6 p-7 rounded-lg hidden" id="artformsuggestion">
         </aside>
 
     </section>
