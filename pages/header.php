@@ -10,7 +10,6 @@
             <div class="list px-12 mb-12 text-gray-200 py-[5em] duration-1000 rounded-md min-h-fit bg-zinc-500 shadow-lg flex gap-10  bottom-10  ">
                 <ul class="grid gap-12 list-disc transition-all duration-300">
                     <li class=" hover:text-slate-800 cursor-pointer transition-all duration-300 hover:translate-y-[-4px] active:translate-y-[-1px]" id="ayurmedics">Ayurmedics</li>
-                    <li class=" hover:text-slate-800 cursor-pointer transition-all duration-300 hover:translate-y-[-4px] active:translate-y-[-1px]" id="yoga">Yoga</li>
                     <li class=" hover:text-slate-800 cursor-pointer transition-all duration-300 hover:translate-y-[-4px] active:translate-y-[-1px]" id="artforms">Art-Forms</li>
                     <li class="hover:text-slate-800 cursor-pointer transition-all duration-300 hover:translate-y-[-4px] active:translate-y-[-1px]" id="first-aids">First-Aids</li>
                 </ul>
