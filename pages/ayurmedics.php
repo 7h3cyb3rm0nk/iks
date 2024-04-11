@@ -146,7 +146,7 @@ function handleSuggestions(inputElement, suggestionElement, apiUrl) {
                     $(".suggestionItem").click(function() {
                         var clickedSuggestion = $(this).text();
                         inputElement.val(clickedSuggestion);
-                        suggestionElement.html('');
+                        // suggestionElement.html('');
                     });
                     // tab completion
 
