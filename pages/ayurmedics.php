@@ -128,52 +128,41 @@ include("../connection.php");
 
 
 <script>
-    $('#plantName').keyup(function() {
-        var query = $(this).val();
-        if(query.length > 0) {
-            $.ajax({
-                url:"../api/plantSuggestionsApi.php",
-                type:'GET',
-                data: { 'query': query},
-                success: function(data){
-                    if(data !== ""){
-                        console.log(data);
-                        var suggestions = JSON.parse(data);
-                        var suggestionsHtml = '';
-                        for(var i=0; i<suggestions.length; i++){
-                            i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
-                        }
-                    }
-                }});
-            } else {
-                $("#plantSuggestion").html('');
+   // Function to handle suggestions
+function handleSuggestions(inputElement, suggestionElement, apiUrl) {
+    var query = inputElement.val();
+    if (query.length > 0) {
+        $.ajax({
+            url: apiUrl,
+            type: 'GET',
+            data: { 'query': query },
+            success: function (data) {
+                if (data !== "") {
+                    var suggestions = JSON.parse(data);
+                    var suggestionsHtml = suggestions.join(", ");
+                    suggestionElement.html(suggestionsHtml);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching suggestions:", error);
             }
-
         });
+    } else {
+        suggestionElement.html('');
+    }
+}
 
-   // disease suggestion ajax call
-    $('#diseaseName').keyup(function() {
-        var query = $(this).val();
-        if(query.length > 0) {
-            $.ajax({
-                url:"../api/diseaseSuggestionsApi.php",
-                type:'GET',
-                data: { 'query': query},
-                success: function(data){
-                    if(data !== ""){
-                        console.log(data);
-                        var suggestions = JSON.parse(data);
-                        var suggestionsHtml = '';
-                        for(var i=0; i<suggestions.length; i++){
-                            i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
-                        }
-                    }
-        }});
-            } else {
-                $("#diseaseSuggestion").html('');
-            }
+// Plant suggestion AJAX call
+$('#plantName').keyup(function () {
+    handleSuggestions($(this), $("#plantSuggestion"), "../api/plantSuggestionsApi.php");
+});
 
-        });
+// Disease suggestion AJAX call
+$('#diseaseName').keyup(function () {
+    handleSuggestions($(this), $("#diseaseSuggestion"), "../api/diseaseSuggestionsApi.php");
+});
+
+
 
     $(".show-more").click(function() {
         
