@@ -16,7 +16,7 @@ require("connection.php");
 
 <body class="min-h-screen bg-gray-200 ">
     <?php include __DIR__ . "/pages/header.php"; ?>
-    <script src="../iks/js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 
 </html>
