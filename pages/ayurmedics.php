@@ -3,6 +3,7 @@ include("../connection.php");
 ?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth snap-y snap-mandatory ">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,22 @@ include("../connection.php");
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/js/jquery.js"></script>
 </head>
+
 <body class="bg-slate-200 min-h-screen h-screen">
 
-<?php
-include("header.php");
-?>
+<body class="bg-slate-200 min-h-screen ">
+
+    <?php
+    include("header.php");
+    ?>
 
 
-<!-- intro section -->
-   <section class=" bg-no-repeat bg-cover bg-bottom m-5 shadow-lg min-h-[60vh] snap-center snap-always  min-w-[80vw] rounded-lg  flex items-end sm:justify-center font-bold px-12  pb-2 text-2xl stroke-gray-400 " style="background-image:url(' ../assets/jpgs/ayurveda.jpg');">
-   <p class="bg-gradient-to-b  from-slate-300 from-50%  text-slate-900 to-transparent  opacity-90 p-4 rounded-lg shadow-md ">
-   Ayurveda, often referred to as the "Science of Life," is an ancient healing system that originated in India more than 5,000 years ago. It is considered the oldest healing science and is deeply rooted in the Vedic culture. Ayurveda is not just a system of medicine but a comprehensive approach to health and wellness that encompasses diet, lifestyle, and the use of herbs and natural remedies. The principles of Ayurveda have influenced many natural healing systems in the West, including Homeopathy and Polarity Therapy.
+    <!-- intro section -->
+    <section class=" bg-no-repeat bg-cover bg-bottom m-5 shadow-lg min-h-[60vh] snap-center snap-always  min-w-[80vw] rounded-lg  flex items-end sm:justify-center font-bold px-12  pb-2 text-2xl stroke-gray-400 " style="background-image:url(' ../assets/jpgs/ayurveda.jpg');">
+        <p class="bg-gradient-to-b  from-slate-300 from-50%  text-slate-900 to-transparent  opacity-90 p-4 rounded-lg shadow-md ">
+            Ayurveda, often referred to as the "Science of Life," is an ancient healing system that originated in India more than 5,000 years ago. It is considered the oldest healing science and is deeply rooted in the Vedic culture. Ayurveda is not just a system of medicine but a comprehensive approach to health and wellness that encompasses diet, lifestyle, and the use of herbs and natural remedies. The principles of Ayurveda have influenced many natural healing systems in the West, including Homeopathy and Polarity Therapy.
 
-    </p>
+        </p>
     </section>
 
 <!-- search for plants/ remedies -->
@@ -31,44 +35,45 @@ include("header.php");
 
 
 
-    <!-- section containing forms -->
-    <section class="flex flex-col items-center justify-center h-full text-2xl ">
-    <div class="forms flex flex-col gap-12 align-start bg-gray-200 p-5 rounded-lg bg-opacity-85 shadow-xl">
-    <!-- plant search form -->
-    <section class="plantSearchform text-left ">
-    <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
-        <label for="plantName" class="text-slate-900 font-bold mb-2">Search Plants:</label>
-        <div class="flex">
-            <input type="text" name="plantName" id="plantName"  class="rounded-md px-2 mr-2">
-            <input type="submit" value="Search" name="plantSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
-            
-        </div>
-        
-    </form>
-    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 "  >Suggestions:<span id="plantSuggestion"></span></aside>
-    </section>
+        <!-- section containing forms -->
+        <section class="flex flex-col items-center justify-center h-full text-2xl ">
+            <div class="forms flex flex-col gap-12 align-start bg-gray-200 p-5 rounded-lg bg-opacity-85 shadow-xl">
+                <!-- plant search form -->
+                <section class="plantSearchform text-left ">
+                    <form action="ayurmedics/getPlants.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
+                        <label for="plantName" class="text-slate-900 font-bold mb-2">Search Plants:</label>
+                        <div class="flex">
+                            <input type="text" name="plantName" id="plantName" class="rounded-md px-2 mr-2">
+                            <input type="submit" value="Search" name="plantSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
 
-    <!-- remedies search form -->
-    <section class="remediesSearchForm  flex flex-col text-left">
-    <form action="ayurmedics/getDiseases.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
-        <label for="diseaseName" class="text-slate-900 font-bold mb-2">Search Remedies for:</label>
-        <div class="flex">
-            <input type="text" name="diseaseName" id="diseaseName" class="rounded-md px-2 mr-2">
-            <input type="submit" value="Search" name="diseaseSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
-        </div>
-        
-    </form>
-    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 " >Suggestions: <span id="diseaseSuggestion"> </span></aside>
+                        </div>
+
+                    </form>
+                    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 ">Suggestions:<span id="plantSuggestion"></span></aside>
+                </section>
+
+                <!-- remedies search form -->
+                <section class="remediesSearchForm  flex flex-col text-left">
+                    <form action="ayurmedics/getDiseases.php" method="get" class="flex flex-row gap-4 justify-start" autocomplete="off">
+                        <label for="diseaseName" class="text-slate-900 font-bold mb-2">Search Remedies for:</label>
+                        <div class="flex">
+                            <input type="text" name="diseaseName" id="diseaseName" class="rounded-md px-2 mr-2">
+                            <input type="submit" value="Search" name="diseaseSubmit" class="bg-slate-800 text-gray-200 px-2 rounded-md font-bold">
+                        </div>
+
+                    </form>
+                    <aside class="flex-none font-bold text-xl mt-2 text-gray-800 ">Suggestions: <span id="diseaseSuggestion"> </span></aside>
+                </section>
+            </div>
+        </section>
+
+
     </section>
-    </div>
-    </section>
-    
-   
-    </section>
-    
+</section>
+</section>
 
 <!-- Plants List -->
-    <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-scroll  scroll-smooth snap-y snap-mandatory " style="background-image: url('/assets/jpgs/plants-bg.jpg');">
+    <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-y-auto  scroll-smooth snap-y snap-mandatory mb-2 " style="background-image: url('/assets/jpgs/plants-bg.jpg');">
     <div class="head w-full md:w-fit shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row ">Plants</div>
     <!-- this container holds all the list of plants -->
     <div class="plantsListContainer overflow-y-auto h-fit grid sm:grid-cols-3 items-start justify-center gap-12 py-[3em]  sm:px-[3em]">
@@ -91,7 +96,7 @@ include("header.php");
             while($row = $result->fetch_assoc()){
                 $sectionId = replace_spaces($row['name']);
                 echo "
-                <div class='bg-white  rounded-md shadow-xl p-4 grid grid-cols-2  bg-opacity-90 snap-always snap-start grid-flow-row-dense ' >
+                <div class='bg-white  rounded-md shadow-xl p-4 grid grid-cols-2 hover:scale-105  bg-opacity-90 snap-always snap-start grid-flow-row-dense ' >
                 <section class='text-slate-800 font-bold text-2xl plantName col-span-2'>{$row['name']}</section>
                 <div class='col-span-2 flex items-center justify-start  '>
                 <section class='w-[7em] h-[8em]'>
@@ -107,83 +112,57 @@ include("header.php");
                 </div>
 
                 ";
-                
+                }
             }
-        }
 
-       
-            
-        
-        ?>
 
-    </div>
-    
-    
+
+
+            ?>
+
+        </div>
+
+
 
     </section>
-    
-</section>
+
+
 <script>
-
-    // script to give suggestions
-//    plant suggestions
-    $('#plantName').keyup(function() {
-        var query = $(this).val();
-        if(query.length > 0) {
-            $.ajax({
-                url:"../api/plantSuggestionsApi.php",
-                type:'GET',
-                data: { 'query': query},
-                success: function(data){
-                    if(data !== ""){
-                        console.log(data);
-                        var suggestions = JSON.parse(data);
-                        var suggestionsHtml = '';
-                        for(var i=0; i<suggestions.length; i++){
-                            i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
-                        }
-                        $('#plantSuggestion').html(suggestionsHtml);
-                    }else {
-                        $('#plantSuggestion').html('');
-                    }
+   // Function to handle suggestions
+function handleSuggestions(inputElement, suggestionElement, apiUrl) {
+    var query = inputElement.val();
+    if (query.length > 0) {
+        $.ajax({
+            url: apiUrl,
+            type: 'GET',
+            data: { 'query': query },
+            success: function (data) {
+                if (data !== "") {
+                    var suggestions = JSON.parse(data);
+                    var suggestionsHtml = suggestions.join(", ");
+                    suggestionElement.html(suggestionsHtml);
                 }
-            });
-        }else{
-            $("#plantSuggestion").html('');
-        }
-        
-    });
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching suggestions:", error);
+            }
+        });
+    } else {
+        suggestionElement.html('');
+    }
+}
+
+// Plant suggestion AJAX call
+$('#plantName').keyup(function () {
+    handleSuggestions($(this), $("#plantSuggestion"), "../api/plantSuggestionsApi.php");
+});
+
+// Disease suggestion AJAX call
+$('#diseaseName').keyup(function () {
+    handleSuggestions($(this), $("#diseaseSuggestion"), "../api/diseaseSuggestionsApi.php");
+});
 
 
-   // disease suggestion ajax call
-    $('#diseaseName').keyup(function() {
-        var query = $(this).val();
-        if(query.length > 0) {
-            $.ajax({
-                url:"../api/diseaseSuggestionsApi.php",
-                type:'GET',
-                data: { 'query': query},
-                success: function(data){
-                    if(data !== ""){
-                        console.log(data);
-                        var suggestions = JSON.parse(data);
-                        var suggestionsHtml = '';
-                        for(var i=0; i<suggestions.length; i++){
-                            i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
-                        }
-                        $('#diseaseSuggestion').html(suggestionsHtml);
-                    }else {
-                        $('#diseaseSuggestion').html('');
-                    }
-                }
-            });
-        }else{
-            $("#diseaseSuggestion").html('');
-        }
-        
-    });
-
-    // ajax call for fetching plant description
 
     $(".show-more").click(function() {
         
@@ -192,30 +171,29 @@ include("header.php");
         var descContainer = $(this).siblings(`#${plantDesc}-desc`);
         var showContainer = $(this)
 
-        $.ajax({
-            url:"../api/getPlantDescriptionApi.php",
-            type: "get",
-            data: {"query": plantName},
-            success: function(data) {
-                descContainer.html(data);
-                descContainer.toggleClass('hidden');
-                if(descContainer.hasClass('hidden')) {
-                    showContainer.html('Show more...');
-                    
-                }
-                else {
-                    showContainer.html('Show less');
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error(error);
-            },
+            $.ajax({
+                url: "../api/getPlantDescriptionApi.php",
+                type: "get",
+                data: {
+                    "query": plantName
+                },
+                success: function(data) {
+                    descContainer.html(data);
+                    descContainer.toggleClass('hidden');
+                    if (descContainer.hasClass('hidden')) {
+                        showContainer.html('Show more...');
+
+                    } else {
+                        showContainer.html('Show less');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
+                },
+            });
+
         });
-
-    });
-   
-</script>
+    </script>
 </body>
+
 </html>
-
-
