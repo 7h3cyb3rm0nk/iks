@@ -8,6 +8,7 @@
 </head>
 <body class="min-h-screen h-screen max-h-fit">
 <?php include __DIR__ . "/../header.php"; ?> 
+<script src="/js/scripts.js"> </script>
 <!-- section to display content -->
 
 <section class="plantContent bg-slate-300 h-full py-12 flex justify-center" style="background-image:url('../../assets/jpgs/plants-bg.jpg');">
