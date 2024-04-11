@@ -139,13 +139,30 @@ function handleSuggestions(inputElement, suggestionElement, apiUrl) {
             success: function (data) {
                 if (data !== "") {
                     var suggestions = JSON.parse(data);
-                    var suggestionsHtml = suggestions.join(", ");
+                    var suggestionsHtml = suggestions.map(suggestion => '<span class="suggestionItem cursor-pointer">' + suggestion + '</span>').join(", ");
                     suggestionElement.html(suggestionsHtml);
+                    
+                    // Add click event listener to suggestions
+                    $(".suggestionItem").click(function() {
+                        var clickedSuggestion = $(this).text();
+                        inputElement.val(clickedSuggestion);
+                        // suggestionElement.html('');
+                    });
+                    // tab completion
+
+                    // inputElement.keydown(function(e) {
+                    //     if (e.which === 9) { // Tab key
+                    //         e.preventDefault(); // Prevent default tab behavior
+                    //         var firstSuggestion = $(".suggestionItem").first().text();
+                    //         inputElement.val(firstSuggestion);
+                    //         suggestionElement.html('');
+                    //     }
+                    // });
+                    
+                
+
                 }
             },
-            error: function (xhr, status, error) {
-                console.error("Error fetching suggestions:", error);
-            }
         });
     } else {
         suggestionElement.html('');
