@@ -978,10 +978,6 @@ video {
   overflow: hidden;
 }
 
-.overflow-scroll{
-  overflow: scroll;
-}
-
 .overflow-y-auto{
   overflow-y: auto;
 }
@@ -1424,6 +1420,10 @@ video {
 .poppins-700 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
+}
+
+*{
+  scrollbar-gutter:unset;
 }
 
 .hover\:translate-y-\[-4px\]:hover{

@@ -73,7 +73,7 @@ include("../connection.php");
 </section>
 
 <!-- Plants List -->
-    <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-scroll  scroll-smooth snap-y snap-mandatory " style="background-image: url('/assets/jpgs/plants-bg.jpg');">
+    <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-y-auto  scroll-smooth snap-y snap-mandatory mb-2 " style="background-image: url('/assets/jpgs/plants-bg.jpg');">
     <div class="head w-full md:w-fit shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row ">Plants</div>
     <!-- this container holds all the list of plants -->
     <div class="plantsListContainer overflow-y-auto h-fit grid sm:grid-cols-3 items-start justify-center gap-12 py-[3em]  sm:px-[3em]">
@@ -128,52 +128,41 @@ include("../connection.php");
 
 
 <script>
-    $('#plantName').keyup(function() {
-        var query = $(this).val();
-        if(query.length > 0) {
-            $.ajax({
-                url:"../api/plantSuggestionsApi.php",
-                type:'GET',
-                data: { 'query': query},
-                success: function(data){
-                    if(data !== ""){
-                        console.log(data);
-                        var suggestions = JSON.parse(data);
-                        var suggestionsHtml = '';
-                        for(var i=0; i<suggestions.length; i++){
-                            i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
-                        }
-                    }
-                }});
-            } else {
-                $("#plantSuggestion").html('');
+   // Function to handle suggestions
+function handleSuggestions(inputElement, suggestionElement, apiUrl) {
+    var query = inputElement.val();
+    if (query.length > 0) {
+        $.ajax({
+            url: apiUrl,
+            type: 'GET',
+            data: { 'query': query },
+            success: function (data) {
+                if (data !== "") {
+                    var suggestions = JSON.parse(data);
+                    var suggestionsHtml = suggestions.join(", ");
+                    suggestionElement.html(suggestionsHtml);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching suggestions:", error);
             }
-
         });
+    } else {
+        suggestionElement.html('');
+    }
+}
 
-   // disease suggestion ajax call
-    $('#diseaseName').keyup(function() {
-        var query = $(this).val();
-        if(query.length > 0) {
-            $.ajax({
-                url:"../api/diseaseSuggestionsApi.php",
-                type:'GET',
-                data: { 'query': query},
-                success: function(data){
-                    if(data !== ""){
-                        console.log(data);
-                        var suggestions = JSON.parse(data);
-                        var suggestionsHtml = '';
-                        for(var i=0; i<suggestions.length; i++){
-                            i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
-                        }
-                    }
-        }});
-            } else {
-                $("#diseaseSuggestion").html('');
-            }
+// Plant suggestion AJAX call
+$('#plantName').keyup(function () {
+    handleSuggestions($(this), $("#plantSuggestion"), "../api/plantSuggestionsApi.php");
+});
 
-        });
+// Disease suggestion AJAX call
+$('#diseaseName').keyup(function () {
+    handleSuggestions($(this), $("#diseaseSuggestion"), "../api/diseaseSuggestionsApi.php");
+});
+
+
 
     $(".show-more").click(function() {
         
@@ -181,7 +170,6 @@ include("../connection.php");
         var plantDesc = plantName.replace(/\s+/g, '-');
         var descContainer = $(this).siblings(`#${plantDesc}-desc`);
         var showContainer = $(this)
-
 
             $.ajax({
                 url: "../api/getPlantDescriptionApi.php",

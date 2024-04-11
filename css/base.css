@@ -17,5 +17,9 @@
 
   }
 
+  *{
+    scrollbar-gutter:unset;
+  }
+
 
   
