@@ -73,7 +73,7 @@ include("../connection.php");
 </section>
 
 <!-- Plants List -->
-    <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-scroll  scroll-smooth snap-y snap-mandatory " style="background-image: url('/assets/jpgs/plants-bg.jpg');">
+    <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-y-auto  scroll-smooth snap-y snap-mandatory mb-2 " style="background-image: url('/assets/jpgs/plants-bg.jpg');">
     <div class="head w-full md:w-fit shadow-md mx-auto  bg-slate-800 h-11 px-4 rounded-lg text-gray-100 font-bold text-center py-2 text-lg md:text-2xl flex items-center justify-center flex-row ">Plants</div>
     <!-- this container holds all the list of plants -->
     <div class="plantsListContainer overflow-y-auto h-fit grid sm:grid-cols-3 items-start justify-center gap-12 py-[3em]  sm:px-[3em]">
@@ -181,7 +181,6 @@ include("../connection.php");
         var plantDesc = plantName.replace(/\s+/g, '-');
         var descContainer = $(this).siblings(`#${plantDesc}-desc`);
         var showContainer = $(this)
-
 
             $.ajax({
                 url: "../api/getPlantDescriptionApi.php",
