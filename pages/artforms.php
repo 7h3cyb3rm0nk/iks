@@ -229,6 +229,7 @@
         // artforms suggestions
         $('#search-input').keyup(function() { // Use keyup event for real-time suggestions
             var suggestion = $(this).val();
+            // if the entered input is digits suggestionns won't be shown
             if (/^\d+$/.test(suggestion)) {
                 $('#artformsuggestion').html('');
                 $('#artformsuggestion').hide();
