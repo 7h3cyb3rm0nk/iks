@@ -13,7 +13,7 @@ include("../connection.php");
 </head>
 <body class="bg-slate-200 min-h-screen h-screen">
 
-<body class="bg-slate-200 min-h-screen ">
+<body class="bg-slate-200 min-h-screen h-screen">
 
     <?php
     include("header.php");
