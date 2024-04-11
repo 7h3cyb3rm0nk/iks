@@ -8,10 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     background-image: url(../assets/first-aids-img/make-med.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     background-position: center center;
 }
