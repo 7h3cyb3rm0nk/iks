@@ -40,7 +40,7 @@ require "header.php";
 <section class="search-section mt-6 mx-auto h-[90vh] max-h-full w-[90vw] max-w-full mb-6 overflow-y-auto">
         <form id = "form" action="first-aids-values/injuryDisplay.php" method="get">
 
-            <input id = "textInput" name="Name" class="border-1 border-gray-300 bg-white h-12 w-[30rem] px-5 pr-18 rounded-full text-lg hover:scale-105 active: scale-110 delay-[50] outline:none ease-in-out transition-all placeholder:text-gray-600 hover:ring-white"
+            <input id = "textInput" name="health" class="border-1 border-gray-300 bg-white h-12 w-[30rem] px-5 pr-18 rounded-full text-lg hover:scale-105 active: scale-110 delay-[50] outline:none ease-in-out transition-all placeholder:text-gray-600 hover:ring-white"
             type="search" name="health" id="health" placeholder="Enter your health issue">
             <button type="submit" class="right-12 mt-5 ml-4">
             <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
