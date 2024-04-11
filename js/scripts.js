@@ -33,3 +33,9 @@ menu.addEventListener("click", () => {
 
 
 
+let titleHeading = document.querySelector("#title");
+
+titleHeading.addEventListener("click", () =>{
+    window.location.href ="/";
+    
+});

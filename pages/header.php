@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div class="text-gray-300 col-span-9 text-center lg:text-5xl navText transition-all duration-500  px-auto md:text-center md:pr-5 md:py-2 poppins-700 text-4xl ">INDIAN KNOWLEDGE SYSTEM
+    <div class="text-gray-300 col-span-9 text-center lg:text-5xl navText transition-all duration-500  px-auto md:text-center md:pr-5 md:py-2 poppins-700 text-4xl "><span cursor-pointer class="cursor-pointer" id="title">INDIAN KNOWLEDGE SYSTEM</span>
 
     </div>
 
