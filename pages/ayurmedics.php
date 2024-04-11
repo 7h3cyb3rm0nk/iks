@@ -168,7 +168,7 @@ include("../connection.php");
                             i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
                         }
                     }
-                });
+        }});
             } else {
                 $("#diseaseSuggestion").html('');
             }
@@ -182,11 +182,6 @@ include("../connection.php");
         var descContainer = $(this).siblings(`#${plantDesc}-desc`);
         var showContainer = $(this)
 
-        $(".show-more").click(function() {
-
-            var plantName = $(this).attr('id');
-            var descContainer = $(this).siblings(`#${plantName}-desc`);
-            var showContainer = $(this)
 
             $.ajax({
                 url: "../api/getPlantDescriptionApi.php",
