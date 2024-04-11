@@ -13,7 +13,7 @@ include("../connection.php");
 </head>
 <body class="bg-slate-200 min-h-screen h-screen">
 
-<body class="bg-slate-200 min-h-screen h-screen">
+<body class="bg-slate-200 min-h-screen ">
 
     <?php
     include("header.php");
@@ -63,6 +63,8 @@ include("../connection.php");
     </form>
     <aside class="flex-none font-bold text-xl mt-2 text-gray-800 " >Suggestions: <span id="diseaseSuggestion"> </span></aside>
     </section>
+</section>
+</section>
 
 <!-- Plants List -->
     <section class=" m-5 bg-gray-300 shadow-lg h-[80vh] bg-cover bg-center min-w-[80vw] snap-center snap-always   rounded-lg p-4 overflow-scroll  scroll-smooth snap-y snap-mandatory " style="background-image: url('/assets/jpgs/plants-bg.jpg');">
@@ -118,8 +120,8 @@ include("../connection.php");
 
     </section>
 
-    // script to give suggestions
-//    plant suggestions
+
+<script>
     $('#plantName').keyup(function() {
         var query = $(this).val();
         if(query.length > 0) {
@@ -136,7 +138,7 @@ include("../connection.php");
                             i==0?(suggestionsHtml +=  " " + suggestions[i]):(suggestionsHtml += ", " + suggestions[i] );
                         }
                     }
-                });
+                }});
             } else {
                 $("#plantSuggestion").html('');
             }
