@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../css/tailwind2-css.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/first.css">
-    <link rel="stylesheet"  href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"/>
-    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+    <link rel="stylesheet" href="../css/tailwind1-css">
     <script src="../js/jquery.js"></script>
     <script async src="../js/first-aids.js"></script>
 

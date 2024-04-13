@@ -19,7 +19,7 @@
         if($result->num_rows > 0){
             while($row = $result->fetch_assoc()){   
                 $plant = strtolower($row['plantName']);
-                $healthProcedure = $row['injuryProcedure'];
+                $healthProcedure = $row['injuryProcedure']; 
                 $injuryType = $row['injuryType'];
 
                 echo "
